@@ -1,0 +1,54 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-md-6 col-lg-4 col-xl-2 bg-dark1 ">
+      <ul class="list-group mt-5 text-left ">
+        <li class="list-group-item border-0 logo">
+          <img src="/assets/logo 2.png" />
+        </li>
+        <li
+          class="list-group-item border-0 side"
+          [routerLink]="'dashboard'"
+          routerLinkActive="active"
+        >
+          <img src="/assets/dash.png" alt="" />Dashboard
+        </li>
+        <li
+          class="list-group-item border-0 side"
+          [routerLink]="'reports'"
+          routerLinkActive="active"
+        >
+          <img src="/assets/reportlogo.png" alt="" /> Reports
+        </li>
+
+        <li
+          class="list-group-item border-0 side"
+          [routerLink]="'insertdata'"
+          routerLinkActive="active"
+        >
+          <img src="/assets/insertlogo.png" alt="" /> Insert Data
+        </li>
+        <li
+          class="list-group-item border-0 side"
+          routerLink="/manageusers"
+          routerLinkActive="active"
+        >
+          <img src="/assets/muserslogo.png" alt="" />Manage Users
+        </li>
+        <li
+          class="list-group-item border-0 side"
+          routerLink="/scanner"
+          routerLinkActive="active"
+        >
+          <img src="/assets/insertdatalogo.png" alt="" /> Scanner
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-9 col-md-6 col-lg-8 col-xl-10 ">
+      <div class="container-flex ">
+        <div class="container-fluid right mt-3">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
