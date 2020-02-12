@@ -8,8 +8,8 @@ import { TokenStorageService } from "../_services/token-storage.service";
 export class AdminLayoutComponent implements OnInit {
   private roles: string[];
   isLoggedIn = false;
-  showAdminBoard = false;
-  showModeratorBoard = false;
+  showADMIN = false;
+  showPDPO = false;
   username: string;
   constructor(private tokenStorageService: TokenStorageService) { }
 
@@ -22,8 +22,8 @@ export class AdminLayoutComponent implements OnInit {
       const user = this.tokenStorageService.getUser();
       this.roles = user.roles;
 
-      this.showAdminBoard = this.roles.includes("ROLE_ADMIN");
-      this.showModeratorBoard = this.roles.includes("ROLE_PDPO");
+      this.showADMIN = this.roles.includes("ROLE_ADMIN");
+      this.showPDPO = this.roles.includes("ROLE_PDPO");
 
       this.username = user.username;
     }

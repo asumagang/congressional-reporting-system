@@ -14,7 +14,7 @@
         </li>
         <li
           class="list-group-item border-0 side"
-          *ngIf="showAdminBoard"
+          *ngIf="showADMIN"
           [routerLink]="'reports'"
           routerLinkActive="active"
         >
@@ -32,6 +32,7 @@
         </li>
         <li
           class="list-group-item border-0 side"
+          *ngIf="showADMIN"
           routerLink="/manageusers"
           routerLinkActive="active"
         >

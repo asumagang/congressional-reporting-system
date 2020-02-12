@@ -1,0 +1,153 @@
+<div class="container-fluid addbody">
+    <div class="container">
+      <h4>{{ headTitle }}</h4>
+      <hr />
+      <form (ngSubmit)="submit()" #programForm="ngForm">
+        <div class="form-group row">
+          <label for="programname" class="col-sm-3 col-form-label"
+            >Program Name</label
+          >
+          <div class="col-sm-9">
+            <input
+            #name="ngModel"
+            [(ngModel)]="newName"
+            name="name"
+            type="text"
+            class="form-control"
+            required
+            placeholder="Program Name"
+            minlength="5"
+            maxlength="30"
+            autocomplete="off"
+            />
+            <div
+            *ngIf="name.invalid && (name.dirty || name.touched)"
+            class="invalid"
+          >
+            <div *ngIf="name.errors.required">
+              Program name is required
+            </div>
+            <div *ngIf="name.errors.minlength">
+              Must be atleast 5 characters
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="department" class="col-sm-3 col-form-label"
+            >Department</label
+          >
+          <div class="col-sm-9">
+            <select
+              class="custom-select my-1 mr-sm-2"
+              #department="ngModel"
+              [(ngModel)]="newDepartment"
+              name="department"
+              required
+            >
+              <option value="Department 1">Department 1</option>
+              <option value="Department 2">Department 2</option>
+              <option value="Department 3">Department 3</option>
+            </select>
+            <div
+            *ngIf="department.invalid && (department.dirty || department.touched)"
+            class="invalid"
+          >
+            <div *ngIf="department.errors.required">
+                  department is required
+            </div>
+          </div>
+          </div>
+          <em class="ml-auto"
+            >Fixed Departments for the DSWD Planning team provided.</em
+          >
+        </div>
+        <div class="form-group row">
+          <label for="target" class="col-sm-3 col-form-label"
+            >Target</label
+          >
+          <div class="col-sm-9">
+            <input
+            #target="ngModel"
+            [(ngModel)]="newTarget"
+            name="target"
+            type="text"
+            class="form-control"
+            required
+            placeholder="target"
+            minlength="5"
+            maxlength="30"
+            autocomplete="off"
+            />
+          </div>
+          <div
+            *ngIf="target.invalid && (target.dirty || target.touched)"
+            class="invalid"
+          >
+            <div *ngIf="target.errors.required">
+                  target is required
+            </div>
+            <div *ngIf="target.errors.minlength">
+              Must be atleast 5 characters
+            </div>
+          </div>
+        
+        </div>
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-3 col-form-label"
+            >Funds</label
+          >
+          <div class="col-sm-9">
+            <input
+            #funds="ngModel"
+            [(ngModel)]="newFunds"
+            name="funds"
+            type="text"
+            class="form-control"
+            required
+            placeholder="funds"
+            minlength="5"
+            maxlength="30"
+            autocomplete="off"
+            />
+          </div>
+          <div
+            *ngIf="funds.invalid && (funds.dirty || funds.touched)"
+            class="invalid"
+          >
+            <div *ngIf="funds.errors.required">
+                  funds is required
+            </div>
+            <div *ngIf="funds.errors.minlength">
+              Must be atleast 5 characters
+            </div>
+          </div>
+      
+        </div>
+        <div class="form-group ">
+          <div>
+                  <input
+                  type="submit"
+                  class="btn btn-primary float-right"
+                  value="{{ program ? 'Update' : 'Create ' }}"
+                  [disabled]="
+                    !programForm.form.valid ||
+                    (funds.pristine &&
+                      name.pristine &&
+                      department.pristine &&
+                      target.pristine)
+                  "
+                />
+                <button
+                  type="button"
+                  class="btn btn-dark mr-1 float-right"
+                  (click)="activeModal.close()"
+                >
+                  Close
+                </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
