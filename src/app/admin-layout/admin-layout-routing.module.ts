@@ -14,6 +14,7 @@ const routes: Routes = [
         path: 'reports', component: ReportsComponent
       },
       { path: 'insertdata', loadChildren: () => import(`../insertdata/insertdata.module`).then(m => m.InsertdataModule) },
+      { path: 'programs', loadChildren: () => import(`../programs/programs.module`).then(m => m.ProgramsModule) },
       {
         path: '', redirectTo: 'dashboard', pathMatch: 'full'
       }

@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { AuthGuard } from './_helpers/auth.guard';
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
@@ -19,6 +23,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     SidebarComponent,
     HomeComponent,
     LoginComponent,
+    FooterComponent,
+    SignupComponent,
     NavbarComponent
   ],
   imports: [
@@ -28,8 +34,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     HttpClientModule,
     NgbModule,
   ],
-  
-  providers: [],
+  providers: [authInterceptorProviders,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,162 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-7 col-md-7 col-lg-7 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body ">
+                <img src="/assets/backbtn.png" id="back" (click)='back()'>
+          <div class="text-center mb-4">
+            <img
+              class="img-responsive center-block logoimg"
+              src="/assets/logo 2.png"
+              alt=""
+            />
+          </div>
+
+          <h5 class="card-title">Sign Up</h5>
+          <form class="form-signin">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                name="username"
+              />
+              <!-- <div class="alert-danger" *ngIf="f.submitted && username.invalid">
+                                  <div *ngIf="username.errors.required">Username is required</div>
+                                  <div *ngIf="username.errors.minlength">
+                                    Username must be at least 3 characters
+                                  </div>
+                                  <div *ngIf="username.errors.maxlength">
+                                    Username must be at most 20 characters
+                                  </div>
+                                </div> -->
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control form-control-sm"
+                name="email"
+              />
+              <!-- <div class="alert-danger " *ngIf="f.submitted && email.invalid">
+                                  <div *ngIf="email.errors.required">Email is required</div>
+                                  <div *ngIf="email.errors.email">
+                                    Email must be a valid email address
+                                  </div>
+                                </div> -->
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="firstname">First name</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  name="firstname"
+                />
+                <!-- <div
+                  class="alert-danger"
+                  *ngIf="f.submitted && firstname.invalid"
+                >
+                  <div *ngIf="firstname.errors.required">
+                    First name is required
+                  </div>
+                  <div *ngIf="firstname.errors.minlength">
+                    First name must be at least 3 characters
+                  </div>
+                  <div *ngIf="firstname.errors.maxlength">
+                    First name must be at most 20 characters
+                  </div>
+                </div> -->
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lastname">Last name</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  name="lastname"
+ 
+                />
+                <!-- <div
+                  class="alert-danger"
+                  *ngIf="f.submitted && lastname.invalid"
+                >
+                  <div *ngIf="lastname.errors.required">
+                    Last name is required
+                  </div>
+                  <div *ngIf="lastname.errors.minlength">
+                    Last name must be at least 3 characters
+                  </div>
+                  <div *ngIf="lastname.errors.maxlength">
+                    Last name must be at most 20 characters
+                  </div>
+                </div> -->
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input
+                type="address"
+                class="form-control form-control-sm"
+                name="address"
+              />
+              <!-- <div class="alert-danger" *ngIf="f.submitted && address.invalid">
+                <div *ngIf="address.errors.required">Address is required</div>
+              </div> -->
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="mobileno">Mobile Number</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  name="mobileno"
+                />
+                <!-- <div
+                  class="alert-danger"
+                  *ngIf="f.submitted && mobileno.invalid"
+                >
+                  <div *ngIf="mobileno.errors.required">
+                    Mobile Number is required
+                  </div>
+                </div> -->
+              </div>
+              <div class="form-group col-md-6">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control form-control-sm"
+                  name="password"
+                />
+                <!-- <div
+                  class="alert-danger"
+                  *ngIf="f.submitted && password.invalid"
+                >
+                  <div *ngIf="password.errors.required">
+                    Password is required
+                  </div>
+                  <div *ngIf="password.errors.minlength">
+                    Password must be at least 6 characters
+                  </div>
+                </div> -->
+              </div>
+            </div>
+
+            <!-- <div class="custom-control custom-checkbox mb-3">
+                          <input type="checkbox" class="custom-control-input" id="customCheck1">
+                          <label class="custom-control-label" for="customCheck1">Remember password</label>
+                        </div> -->
+            <br />
+            <button
+              class="btn btn-lg btn-primary btn-block text-uppercase"
+              type="submit"
+            >
+              Sign up
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

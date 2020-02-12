@@ -1,0 +1,10 @@
+.footer{
+    max-height: 20px;
+    background-color: #545454 ;
+}
+.footer p{
+    text-align: center;
+    font-size: 10px;
+    color: #ECECEC ;
+    margin-bottom: 25px;
+}

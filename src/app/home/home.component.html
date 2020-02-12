@@ -1,8 +1,52 @@
-<!-- <div class="container">
-  <header class="jumbotron">
-    <p>{{ content }}</p>
-  </header>
-</div> -->
+<div class="container-flex" id="tophead" >
+    <p>Congressional Report System V1.1</p>
+  </div>
+
+
+    <nav class="navbar sticky-top navbar-expand-lg  static-top" *ngIf="!isLoggedIn">
+
+          <a class="navbar-brand " >
+            <img src="/assets/logo 2.png" routerLink="home" class="logs" />
+          </a>
+      
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+          <i class="fa fa-bars" aria-hidden="true"></i>
+
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto " *ngIf="!isLoggedIn">
+                    <li class="nav-item">
+                      <a (click)='signup()'>Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                      <a (click)='login()'>Login</a>
+                    </li>
+                  </ul>
+            <ul class="navbar-nav ml-auto " *ngIf="isLoggedIn">
+              <li class="nav-item avatar noti">
+                <a class="nav-link ">
+                  <img
+                    src="/assets/bell.png"
+                    class="rounded-circle z-depth-0"
+                    alt="avatar image"
+                  />
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+      </nav>
+      
+
+
 <div id="carouselExampleControls" class="carousel slide  carou" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -10,17 +54,17 @@
           <div class="row">
             <div class="col-sm-3 col-md-6 ">
               <div class="container left text-center">
-                  <h1>Generate Report for faster data tracking.</h1>
+                  <h1>Congressional Reporting System.</h1>
                   <br>
-                  <p>Congressional Reporting System</p>
+                  <p>Department of Social Welfare and Development Region 7</p>
                   <button class="btn btn-primary mb-5" (click)='register()'>Create new Account.</button>
               </div>
               
             </div>
             <div class="col-sm-9 col-md-6 ">
-                <div class="card mt-5 mb-5">
+                <!-- <div class="card mt-5 mb-5">
                     <img class="card-img-top " src="/assets/reportimg.jpg" alt="Card image cap">
-                  </div>
+                  </div> -->
             </div>
           </div>
         </div>
@@ -30,9 +74,9 @@
               <div class="row">
                 <div class="col-sm-3 col-md-6 ">
                   <div class="container left">
-                      <h1>See DSWD programs graphs.</h1>
-                      <br>
-                      <p>Congressional Reporting System</p>
+                      <h1>Generate Report for faster data tracking.</h1>
+                  <br>
+                  <p>Congressional Reporting System</p>
                     
                   </div>
                   

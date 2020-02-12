@@ -10,14 +10,15 @@
           [routerLink]="'dashboard'"
           routerLinkActive="active"
         >
-          <img src="/assets/dash.png" alt="" />Dashboard
+          <a *ngIf="isLoggedIn"> <img src="/assets/dash.png" />Dashboard</a>
         </li>
         <li
           class="list-group-item border-0 side"
+          *ngIf="showAdminBoard"
           [routerLink]="'reports'"
           routerLinkActive="active"
         >
-          <img src="/assets/reportlogo.png" alt="" /> Reports
+          <a *ngIf="isLoggedIn"><img src="/assets/reportlogo.png" /> Reports</a>
         </li>
 
         <li
@@ -25,21 +26,40 @@
           [routerLink]="'insertdata'"
           routerLinkActive="active"
         >
-          <img src="/assets/insertlogo.png" alt="" /> Insert Data
+          <a *ngIf="isLoggedIn">
+            <img src="/assets/insertlogo.png" /> Insert Data</a
+          >
         </li>
         <li
           class="list-group-item border-0 side"
           routerLink="/manageusers"
           routerLinkActive="active"
         >
-          <img src="/assets/muserslogo.png" alt="" />Manage Users
+          <a *ngIf="isLoggedIn"
+            ><img src="/assets/muserslogo.png" />Manage Users</a
+          >
+        </li>
+        <li
+          class="list-group-item border-0 side"
+          [routerLink]="'programs'"
+          routerLinkActive="active"
+        >
+          <a *ngIf="isLoggedIn"> <img src="/assets/proglogo.png" />Programs</a>
         </li>
         <li
           class="list-group-item border-0 side"
           routerLink="/scanner"
           routerLinkActive="active"
+          *ngIf="isLoggedIn"
         >
-          <img src="/assets/insertdatalogo.png" alt="" /> Scanner
+          <a><img src="/assets/insertdatalogo.png" /> Scanner</a>
+        </li>
+        <li
+          class="list-group-item border-0 side"
+          *ngIf="isLoggedIn"
+          (click)="logout()"
+        >
+          <a ><img src="/assets/insertdatalogo.png" />Sign out</a>
         </li>
       </ul>
     </div>
