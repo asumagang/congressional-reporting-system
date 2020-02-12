@@ -15,6 +15,7 @@ const routes: Routes = [
       },
       { path: 'insertdata', loadChildren: () => import(`../insertdata/insertdata.module`).then(m => m.InsertdataModule) },
       { path: 'programs', loadChildren: () => import(`../programs/programs.module`).then(m => m.ProgramsModule) },
+      { path: 'profile', loadChildren: () => import(`../profile/profile.module`).then(m => m.ProfileModule) },
       {
         path: '', redirectTo: 'dashboard', pathMatch: 'full'
       }

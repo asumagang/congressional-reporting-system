@@ -5,7 +5,7 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 import { ReportsComponent } from '../reports/reports.component';
 import { AdminLayoutRoutingModule } from './admin-layout-routing.module';
 import { AdminLayoutComponent } from './admin-layout.component';
-import { NavbarComponent } from '../navbar/navbar.component';
+
 
 @NgModule({
   declarations: [DashboardComponent,ReportsComponent,AdminLayoutComponent],

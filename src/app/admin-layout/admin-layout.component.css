@@ -65,4 +65,13 @@ i{
 .logo img{
     width: 140px;
 }
-  
+.avatar img{
+  width: 35px;
+  margin-right: 10px;
+}
+.avatar{
+  color: white;
+}
+.dropdown-menu a{
+  font-size: 12px;
+}
