@@ -33,7 +33,7 @@
         <li
           class="list-group-item border-0 side"
           *ngIf="showADMIN"
-          routerLink="/manageusers"
+          [routerLink]="'manageusers'"
           routerLinkActive="active"
         >
           <a *ngIf="isLoggedIn"

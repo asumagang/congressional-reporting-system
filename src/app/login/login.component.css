@@ -39,6 +39,9 @@
 #back:hover{
     box-shadow: 0 0.5rem 2rem 0 rgba(0, 1, 1, 0.5);
 }
+.alertbox{
+  color: white;
+}
   
   /* Fallback for Edge
   -------------------------------------------------- */

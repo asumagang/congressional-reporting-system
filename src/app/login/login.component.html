@@ -13,7 +13,7 @@
             />
           </div>
 
-          <h5 class="card-title">Sign In</h5>
+          <h5 class="card-title"*ngIf="!isLoggedIn">Sign In</h5>
           <form class="form-signin" *ngIf="!isLoggedIn"
           name="form"
           (ngSubmit)="f.form.valid && onSubmit()"
@@ -77,12 +77,15 @@
                     >
                       Login failed: {{ errorMessage }}
                     </div>
-                    <div class="alert  text-center bg-primary" *ngIf="isLoggedIn">
-                            Logged in as {{ roles }}.
-                          </div>
+                   
                   </div>
                  
           </form>
+          <div class="alert  text-center bg-primary alertbox" *ngIf="isLoggedIn">
+            Logged in as {{ roles }}.
+            <button class="btn btn-dark mt-4" (click)='Dashboard()'>Continue to Dashboard.</button>
+
+          </div>
         </div>
       </div>
     </div>

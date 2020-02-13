@@ -49,5 +49,7 @@ export class LoginComponent implements OnInit {
   back(){
     this.router.navigate( ["/home"] );
   }
-
+  Dashboard(){
+    this.router.navigate(["/admin-layout"])
+  }
 }
