@@ -17,6 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SignupComponent } from './signup/signup.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

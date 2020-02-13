@@ -6,6 +6,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToastService } from '../_services/toast.service';
 import { Page } from '../_models/page';
 import { AddProgramComponent } from '../add-program/add-program.component';
+import { ProgramDeleteComponent } from '../program-delete/program-delete.component';
 
 @Component({
   selector: 'app-programs',
@@ -110,6 +111,21 @@ export class ProgramsComponent implements OnInit {
       }
     });
   }
-
+  onDelete(program: Program) {
+    const modalRef = this.modalService.open(ProgramDeleteComponent);
+    modalRef.componentInstance.program = program;
+    modalRef.result.then(result => {
+      if(!result) return null;
+      this.programService.deleteProgram(result).subscribe(
+        response => {
+          if (response) {
+            this.onPageChange();
+            this.toastService.showSuccess("Delete Success");
+          }
+        },
+        () => this.toastService.showFailed("Delete Failed")
+      );
+    });
+  }
 
 }

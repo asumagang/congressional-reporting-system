@@ -7,12 +7,12 @@ import { FormsModule } from '@angular/forms';
 import { NgbPaginationModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddProgramComponent } from '../add-program/add-program.component';
 import { RouterModule } from '@angular/router';
-
+import { ProgramDeleteComponent } from '../program-delete/program-delete.component';
 
 
 
 @NgModule({
-  declarations: [ProgramsComponent, AddProgramComponent],
+  declarations: [ProgramsComponent, AddProgramComponent, ProgramDeleteComponent],
   imports: [
     CommonModule,
     ProgramsRoutingModule,
@@ -21,6 +21,7 @@ import { RouterModule } from '@angular/router';
     NgbModalModule,
     RouterModule,
 
-  ]
+  ],
+  entryComponents:[AddProgramComponent, ProgramDeleteComponent]
 })
 export class ProgramsModule { }

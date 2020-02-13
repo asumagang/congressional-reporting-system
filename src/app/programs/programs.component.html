@@ -23,8 +23,8 @@
               <td>{{program.department}}</td>
               <td>{{program.target}}</td>
               <td>{{program.funds}}</td>
-              <td><button class="btn btn-primary btn-sm" (click)="openProgramForm(program)">Edit</button>
-                <button class="btn btn-danger btn-sm">Delete</button>
+              <td><button class="btn btn-primary btn-sm " (click)="openProgramForm(program)">Edit</button>
+                <button class="btn btn-danger btn-sm ml-1" (click)="onDelete(program)">Delete</button>
               </td>
             </tr>
           </tbody>
