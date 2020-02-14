@@ -1,0 +1,119 @@
+<div class="container-fluid divbody">
+  <div class="container-fluid">
+    <br />
+    <button class="btn btn-light float-right" (click)="openProgramForm(null)">
+      Add Notice
+    </button>
+    <h4>Activity Log</h4>
+    <div class="form-row">
+      <div class="form-group col-md-7">
+        <label for="inputEmail4"></label>
+        <input
+          type="email"
+          class="form-control form-control-sm"
+          id="inputEmail4"
+          placeholder="Search"
+        />
+      </div>
+      <div class="form-group col-md-5">
+        <div class="form-group row mt-4">
+          <label for="inputEmail3" class="col-sm-3 col-form-label"
+            >Sort By:</label
+          >
+          <div class="col-sm-9">
+            <select
+              class=" form-control form-control-sm"
+              id="inlineFormCustomSelect"
+            >
+              <option>Report Related Notice</option>
+              <option value="1">User Registration Notice</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="table    table-borderless  table-sm">
+      <tbody class="tabody">
+        <tr>
+          <td><img src="/assets/pro.jpg" class="profile" /> Adrian</td>
+          <td>Registration for new user.</td>
+          <td>
+            <button
+              class="btn btn-primary btn-sm "
+              (click)="openProgramForm(program)"
+            >
+              View
+            </button>
+            <button
+              class="btn btn-danger btn-sm ml-1"
+              (click)="onDelete(program)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td><img src="/assets/pro.jpg" class="profile" /> Adrian</td>
+          <td>Registration for new user.</td>
+          <td>
+            <button
+              class="btn btn-primary btn-sm "
+              (click)="openProgramForm(program)"
+            >
+              View
+            </button>
+            <button
+              class="btn btn-danger btn-sm ml-1"
+              (click)="onDelete(program)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td><img src="/assets/pro.jpg" class="profile" /> Adrian</td>
+          <td>Registration for new user.</td>
+          <td>
+            <button
+              class="btn btn-primary btn-sm "
+              (click)="openProgramForm(program)"
+            >
+              View
+            </button>
+            <button
+              class="btn btn-danger btn-sm ml-1"
+              (click)="onDelete(program)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="t-footer container d-flex justify-content-between pt-2">
+    <div class="row">
+      <div class="col">
+        <ngb-pagination
+          [collectionSize]="collectionSize"
+          [pageSize]="pageSize"
+          [(page)]="page"
+          (pageChange)="onPageChange()"
+          size="sm"
+        ></ngb-pagination>
+      </div>
+      <div *ngIf="searchText" class="col p-0">
+        <p class="result-text">
+          {{
+            resultLength > 1
+              ? resultLength + " results"
+              : resultLength === 1
+              ? "1 result"
+              : "No result"
+          }}
+        </p>
+      </div>
+    </div>
+    <div></div>
+  </div>
+</div>

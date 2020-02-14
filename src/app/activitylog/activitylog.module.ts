@@ -1,24 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ProfileRoutingModule } from './profile-routing.module';
-import { ProfileComponent } from './profile.component';
-
-
+import { ActivitylogRoutingModule } from './activitylog-routing.module';
+import { ActivitylogComponent } from './activitylog.component';
 import { FormsModule } from '@angular/forms';
 import { NgbPaginationModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [ProfileComponent],
+  declarations: [ActivitylogComponent],
   imports: [
     CommonModule,
-    ProfileRoutingModule,
+    ActivitylogRoutingModule,
     FormsModule,
     NgbPaginationModule,
     NgbModalModule,
     RouterModule,
   ],
-  entryComponents:[]
+  entryComponents:[ ]
 })
-export class ProfileModule { }
+export class ActivitylogModule { }

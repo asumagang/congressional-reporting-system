@@ -1,0 +1,49 @@
+
+  .mar{
+    margin-top: -8px;
+  }
+  .label-sm{
+    font-size: 12px;
+  }
+  .formdesign{
+  
+    padding: 5px 5px;
+    border-radius: 5px;
+  }
+
+  .titlenav{
+    margin-top: -25px;
+    border-bottom: solid #E1E1E1  1px;
+  }
+  .navbar-brand{
+    color: black;
+  }
+  .navbar-brand:hover{
+    color: black;
+  }
+
+.profile{
+    width: 25px;
+    border-radius: 50%;
+}
+.searchbar input{
+  width: 50%;
+}
+
+/* .divbody{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  min-height: 600px;
+  margin-top: -35px;
+  background-color: white;
+} */
+.tabody tr{
+  font-size: 15px;
+  height: 15px;
+}
+.light-blue-backdrop {
+  background-color: black;
+  opacity: 1;
+}

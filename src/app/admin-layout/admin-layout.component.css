@@ -41,7 +41,11 @@
     max-height: 40px;
     box-shadow: 0px 10px 10px -15px #111;
   }
-
+  .list-group-item:hover{
+    background-color: #F6F6F6;
+    color: #B0B0B0 ;
+    border-left: #59E40F  solid 5px;
+  }
 
   .active{
     background-color: white;
@@ -50,6 +54,7 @@
 
 
   }
+
   .right{
     background-color: white;
   }

@@ -11,8 +11,8 @@
               alt=""
             />
           </div>
-
-          <h5 class="card-title">Sign Up</h5>
+<!-- 
+          <h5 class="card-title">Sign Up</h5> -->
           <form
           *ngIf="!isSuccessful"
           name="form"
@@ -20,7 +20,7 @@
           #f="ngForm"
           novalidate
         >
-        <h4>Sign up</h4>
+        <h4 class="mb-2">Sign up</h4>
           <div class="form-group">
             <label for="username">Username</label>
             <input
@@ -224,6 +224,9 @@
             Signup failed!<br />{{ errorMessage }}
           </div>
         </form>
+        <div class="alert alert-success" *ngIf="isSuccessful">
+          Your registration is successful!
+        </div>
         </div>
       </div>
     </div>

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProfileComponent } from './profile.component';
+import { ActivitylogComponent } from './activitylog.component';
 
 
 const routes: Routes = [
   {
     path: "",
-    component: ProfileComponent,
+    component: ActivitylogComponent,
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ProfileRoutingModule { }
+export class ActivitylogRoutingModule { }

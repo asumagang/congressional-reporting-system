@@ -17,6 +17,7 @@ const routes: Routes = [
       { path: 'programs', loadChildren: () => import(`../programs/programs.module`).then(m => m.ProgramsModule) },
       { path: 'profile', loadChildren: () => import(`../profile/profile.module`).then(m => m.ProfileModule) },
       { path: 'manageusers', loadChildren: () => import(`../manageusers/manageusers.module`).then(m => m.ManageusersModule) },
+      { path: 'activitylog', loadChildren: () => import(`../activitylog/activitylog.module`).then(m => m.ActivitylogModule) },
       {
         path: '', redirectTo: 'dashboard', pathMatch: 'full'
       }
