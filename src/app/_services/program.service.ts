@@ -47,12 +47,12 @@ export class ProgramService {
   }
 
   //Get 1 program from id : /programs/{id}
-  getUser(id: string): Observable<Program> {
+  getProgram(id: string): Observable<Program> {
     return this.http.get<Program>(`${this.baseUrl}/${id}`);
   }
 
   //Get all programs : /programs/all
-  getAllUsers(): Observable<Program[]> {
+  getAllPrograms(): Observable<Program[]> {
     return this.http.get<Program[]>(`${this.baseUrl}/all`);
   }
 }

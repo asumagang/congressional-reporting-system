@@ -3,8 +3,9 @@ import { Program } from '../_models/program';
 import { ProgramService } from '../_services/program.service';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ToastService } from '../_services/toast.service';
 import { Page } from '../_models/page';
+
+import { ToastrService } from 'ngx-toastr';
 import { AddProgramComponent } from '../add-program/add-program.component';
 import { ProgramDeleteComponent } from '../program-delete/program-delete.component';
 
@@ -28,7 +29,7 @@ export class ProgramsComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private modalService: NgbModal,
-    private toastService: ToastService
+    private toastr: ToastrService,
   ) {}
 
   ngOnInit() {
@@ -62,8 +63,9 @@ export class ProgramsComponent implements OnInit {
         this.programsData = response.content;
         this.collectionSize =
           response.totalElements > 0 ? response.totalElements : 5;
+          this.toastr.success("Server Running");
       },
-      () => this.toastService.showFailed("Server Error")
+      () =>this.toastr.error("Server Error.") 
     );
   }
 
@@ -78,7 +80,7 @@ export class ProgramsComponent implements OnInit {
           this.resultLength =
             response.totalElements > 0 ? this.collectionSize : 0;
         },
-        () => this.toastService.showFailed("Server Error")
+        () => this.toastr.error("Server Error.")
       );
   }
   openProgramForm(program: Program) {
@@ -92,10 +94,10 @@ export class ProgramsComponent implements OnInit {
           (response: Program) => {
             if (response) {
               this.onPageChange();
-              this.toastService.showSuccess("Update Success");
+              this.toastr.success("Update Success.")
             }
           },
-          () => this.toastService.showFailed("Update Failed")
+          () => this.toastr.error("Update Failed.")
         );
       } else {
         //Create
@@ -103,10 +105,10 @@ export class ProgramsComponent implements OnInit {
           (response: Program) => {
             if (response) {
               this.onPageChange();
-              this.toastService.showSuccess("Creation Success");
+              this.toastr.success("Program Added Successfully.")
             }
           },
-          () => this.toastService.showFailed("Creation Failed")
+          () => this.toastr.error("Program Creation Failed.")
         );
       }
     });
@@ -120,10 +122,10 @@ export class ProgramsComponent implements OnInit {
         response => {
           if (response) {
             this.onPageChange();
-            this.toastService.showSuccess("Delete Success");
+            this.toastr.success("Delete Success");
           }
         },
-        () => this.toastService.showFailed("Delete Failed")
+        () => this.toastr.error("Delete Failed")
       );
     });
   }

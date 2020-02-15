@@ -8,21 +8,21 @@
         <table class="table table-hover mt-2 table-sm">
            <thead>
              <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
+                <th>Name</th>
                 <th>Email</th>
                 <th>Address</th>
                 <th>Mobile no.</th>
-                <th>Department</th>
+                <th>Username</th>
                <th></th>
              </tr>
            </thead>
            <tbody class="tabody">
-             <tr *ngFor="let program of programsData">
-               <td>{{program.name}}</td>
-               <td>{{program.department}}</td>
-               <td>{{program.target}}</td>
-               <td>{{program.funds}}</td>
+             <tr *ngFor="let user of usersData">
+               <td>{{user.firstname}} {{user.lastname}}</td>
+               <td>{{user.email}}</td>
+               <td>{{user.address}}</td>
+               <td>{{user.mobileno}}</td>
+               <td>{{user.username}}</td>
                <td><button class="btn btn-primary btn-sm " (click)="openProgramForm(program)">Edit</button>
                  <button class="btn btn-danger btn-sm ml-1" (click)="onDelete(program)">Delete</button>
                </td>
