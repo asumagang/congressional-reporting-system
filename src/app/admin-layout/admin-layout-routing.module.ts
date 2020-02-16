@@ -18,6 +18,7 @@ const routes: Routes = [
       { path: 'profile', loadChildren: () => import(`../profile/profile.module`).then(m => m.ProfileModule) },
       { path: 'manageusers', loadChildren: () => import(`../manageusers/manageusers.module`).then(m => m.ManageusersModule) },
       { path: 'activitylog', loadChildren: () => import(`../activitylog/activitylog.module`).then(m => m.ActivitylogModule) },
+      { path: 'scanner', loadChildren: () => import(`../scanner/scanner.module`).then(m => m.ScannerModule) },
       {
         path: '', redirectTo: 'dashboard', pathMatch: 'full'
       }

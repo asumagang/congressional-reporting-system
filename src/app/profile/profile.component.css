@@ -1,0 +1,27 @@
+.profilebackdiv{
+    height: 150px;
+    border-radius: 5px;
+}
+.ppic{
+    text-align: center;
+    margin-top: -80px;
+}
+.ppic img{
+    border-radius: 50%;
+    width: 100px;
+}
+.card-profile {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-profile .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  
+  .card-profile .card-body {
+    padding: 2rem;
+  }
