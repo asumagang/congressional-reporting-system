@@ -11,7 +11,6 @@ import { AuthGuard } from "./_helpers/auth.guard";
 import { authInterceptorProviders } from "./_helpers/auth.interceptor";
 import { AppComponent } from "./app.component";
 import { SidebarComponent } from "./sidebar/sidebar.component";
-import { AdminLayoutComponent } from "./admin-layout/admin-layout.component";
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./login/login.component";
 import { NavbarComponent } from "./navbar/navbar.component";
