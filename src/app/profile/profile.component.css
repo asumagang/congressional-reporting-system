@@ -1,5 +1,87 @@
+/* .profilebackdiv{
+    height: 150px;
+    border-radius: 5px;
+}
+.ppic{
+    text-align: center;
+    margin-top: -80px;
+}
+.ppic img{
+    border-radius: 50%;
+    width: 100px;
+}
+.card-profile {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-profile .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  
+  .card-profile .card-body {
+    padding: 2rem;
+  } */
 
+  .profile-head{
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+    height: 180px;
+    margin-top: 100px;
+    background-color: #F0F0F0;
+    position: relative;
+    animation: animatop 0.9s cubic-bezier(0.425, 1.14, 0.47, 1.125) forwards;
+  }
+  .profile-head img{
+    width: 150px;
+    border-radius: 50%;
+    margin-top: -50px;
+    border: solid #F0F0F0 10px;
+  }
+  .imgdiv{
+    text-align: center;
+  }
   .probody{
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+    height: 400px;
+    padding: 20px 20px;
+    position: relative;
+    animation: animatop 0.9s cubic-bezier(0.425, 1.14, 0.47, 1.125) forwards;
+  }
+  @keyframes animatop {
+    0% {
+      opacity: 0;
+      bottom: -500px;
+    }
+    100% {
+      opacity: 1;
+      bottom: 0px;
+    }
+  }
+  @keyframes animainfos {
+    0% {
+      bottom: 10px;
+    }
+    100% {
+      bottom: -42px;
+    }
+  }
+  @keyframes rotatemagic {
+    0% {
+      opacity: 0;
+      transform: rotate(0deg);
+      top: -24px;
+      left: -253px;
+    }
+    100% {
+      transform: rotate(-30deg);
+      top: -24px;
+      left: -78px;
+    }
+  }
+  /* .probody{
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
     height: 400px;
     padding: 20px 20px;
@@ -94,4 +176,4 @@
       top: -24px;
       left: -78px;
     }
-  }
+  } */
