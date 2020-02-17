@@ -12,7 +12,7 @@ export class ActivitylogComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
 //   show(){
 //     this.toastr.success("Hello, I'm the toastr message.")
 // }

@@ -1,5 +1,5 @@
 <div class="container-fluid divbody">
-  <div class="container-fluid">
+  <div class="container-fluid ">
     <br />
     <button class="btn btn-light float-right" (click)='show()'>
       Add Notice
@@ -102,18 +102,6 @@
           size="sm"
         ></ngb-pagination>
       </div>
-      <div *ngIf="searchText" class="col p-0">
-        <p class="result-text">
-          {{
-            resultLength > 1
-              ? resultLength + " results"
-              : resultLength === 1
-              ? "1 result"
-              : "No result"
-          }}
-        </p>
-      </div>
     </div>
-    <div></div>
   </div>
 </div>
