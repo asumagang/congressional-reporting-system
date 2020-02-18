@@ -21,5 +21,19 @@ export class UserService {
     return this.http.get<User[]>(`${this.baseUrl}/all`);
   }
 
+   //Delete program : /program/{id}
+   deleteUser(id: string): Observable<User> {
+    return this.http.delete<User>(`${this.baseUrl}/${id}`);
+  }
+
+  //Update user : /users/{id}
+  updateUser(user: User): Observable<User> {
+    return this.http.put<User>(`${this.baseUrl}/${user.id}`, user);
+  }
+
+    //Add program : /programs
+    addUser(user: User): Observable<User> {
+      return this.http.post<User>(this.baseUrl, user);
+    }
 
 }

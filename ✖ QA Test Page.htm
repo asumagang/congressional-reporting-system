@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>✖ QA Test Page</title>
+        <link rel="stylesheet" href="./✖ QA Test Page_files/bootstrap.css">
+        <link rel="stylesheet" href="./✖ QA Test Page_files/bootstrap-responsive.css">
+        <style type="text/css">
+            .sidebar-nav {
+                padding: 9px 0;
+            }
+        </style>
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+        <link rel="stylesheet" href="./✖ QA Test Page_files/cmTestPage.css">
+        <link rel="stylesheet" href="./✖ QA Test Page_files/qunit-1.11.0.css">
+        
+        <script type="text/javascript" src="./✖ QA Test Page_files/jquery-latest.js"></script>
+        <script src="./✖ QA Test Page_files/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="./✖ QA Test Page_files/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./✖ QA Test Page_files/utils.js"></script>
+        <script type="text/javascript" src="./✖ QA Test Page_files/adstestpage.js"></script>
+        <script type="text/javascript" src="./✖ QA Test Page_files/cmTestPage.js"></script>
+    </head>
+    
+    <body>
+        <!-- NAVBAR -->
+                <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid"> <a class="brand" href="http://auto-eu-consent.truste-svc.net/qa/qatestpage/index.php?#">QA Test Page</a>
+
+                    <ul class="nav">
+                        <li class="active"><a href="http://auto-eu-consent.truste-svc.net/qa/qatestpage/index.php?#">Home</a>
+                        </li>
+                        <li><a href="http://auto-eu-consent.truste-svc.net/qa/qatestpage/index.php?#">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- BODY -->
+        <div style="margin-top:60px;" class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="well sidebar-nav">
+                        <div class="tabbable tabs-left">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-header">Consent Manager</li>
+                                <li class=""><a href="http://auto-eu-consent.truste-svc.net/qa/qatestpage/index.php?#cmIcon" data-toggle="tab">Load CM Icon</a>
+                                </li>
+                                <li class="active"><a href="http://auto-eu-consent.truste-svc.net/qa/qatestpage/index.php?#htmlEdit" data-toggle="tab">HTML Edit</a>
+                                </li>
+                                <li><a href="http://auto-eu-consent.truste-svc.net/qa/qatestpage/index.php?#cmApi" data-toggle="tab">CM API Test</a>
+                                </li>
+                                <li><a href="http://auto-eu-consent.truste-svc.net/qa/qatestpage/index.php?#cmData" data-toggle="tab" id="cookieLogMenu">Cookies and Logs</a>
+                                </li>
+                                <li><a href="http://auto-eu-consent.truste-svc.net/qa/qatestpage/index.php?#cmReport" data-toggle="tab">Click Reporting Test</a>
+                                </li>
+
+                                <li class="nav-header">ADS</li>
+                                <li><a href="http://auto-eu-consent.truste-svc.net/qa/qatestpage/index.php?#">Link 1</a>
+                                </li>
+                                <li><a href="http://auto-eu-consent.truste-svc.net/qa/qatestpage/index.php?#adsIcon" data-toggle="tab">Load Ads Icon</a>
+                                </li>
+                                <li><a href="http://auto-eu-consent.truste-svc.net/qa/qatestpage/index.php?#">Link 3</a>
+                                </li>
+                                
+                                <li class="nav-header">Testing (UT/IT)</li>
+                                <li><a href="http://auto-eu-consent.truste-svc.net/qa/qatestpage/index.php?#cmUtIt" data-toggle="tab">CM Unit Test</a></li>
+                                <li><a href="http://auto-eu-consent.truste-svc.net/qa/qatestpage/index.php?#">Link 2</a>
+                                </li>
+                                <li><a href="http://auto-eu-consent.truste-svc.net/qa/qatestpage/index.php?#">Link 3</a>
+                                </li>
+                            </ul>
+                            <!-- BODY CONTENT -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade" id="cmIcon">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <fieldset>
+                    <legend>CM Loader</legend>
+                    <form class="form-horizontal" onsubmit="">
+                        <!-- Protocol -->
+                        <div class="control-group">
+                            <label class="control-label" for="cmProtocol">Protocol:</label>
+                            <div class="controls">
+                                <select class="input-small" id="cmProtocol">
+                                    <option value="http://" selected="">HTTP</option>
+                                    <option value="https://">HTTPS</option>
+                                    <option value="//">None</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Server -->
+                        <div class="control-group">
+                            <label class="control-label" for="cmServerSelect">Server:</label>
+                            <div class="controls">
+                                <select class="input-medium" id="cmServerSelect">
+                                    <option value="icon-dev.intranet.truste-labs.com">Dev</option>
+			            <option value="icon-dev-sf.truste-svc.net">Dev SF</option>
+                                    <option value="ph-dev001.truste-svc.net">Alpha</option>
+                                    <option value="ph-dev002.truste-svc.net">Beta</option>
+                                    <option selected="selected" value="eu-icon-qa-sf.truste-svc.net_cdn">QA_CDN</option>
+                                    <option value="eu-icon-qa-sf.truste-svc.net">QA_SF</option>                                     
+                                    <option value="consent-icon-staging.trustarc.com">Staging-Rebrand</option>
+                                    <option value="consent-st-staging.trustarc.com">Staging-Rebrand-CDN</option>
+                                    <option value="consent.trustarc.com">Consent-Rebrand</option>
+                                    <option value="consent-st.trustarc.com">Consent-Rebrand-CDN</option>	
+				    <option value="consent.truste.com">EU-Production</option>
+                                    <option value="consent-st.truste.com">EU-Prod-CDN</option>
+                                    <option value="auto-icon.intranet.truste-labs.com">OBA-Automation</option>
+                  	            <option value="auto-eu-consent.truste-svc.net">EU-Automation</option>
+                        	</select>
+                            </div>
+                        </div>
+                        <!-- Domain -->
+                        <div class="control-group">
+                            <label class="control-label" for="domain">Domain:</label>
+                            <div class="controls">
+                                <input class="input-medium" type="text" id="domain" placeholder="Enter cm domain">
+                            </div>
+                        </div>
+                        <!-- Country -->
+                        <div class="control-group">
+                            <label class="control-label" for="country">Country:</label>
+                            <div class="controls">
+                                <input class="input-medium" type="text" id="country" placeholder="Enter cm country">
+                            </div>
+                        </div>
+                        
+                        <!-- Language -->
+                        <div class="control-group">
+                            <label class="control-label" for="cmLanguage">Language:</label>
+                            <div class="controls">
+                                <input class="input-medium" type="text" id="cmLanguage" placeholder="Enter cm language">
+                            </div>
+                        </div>
+                        
+                         <!-- JavaScript -->
+                        <div class="control-group">
+                            <label class="control-label" for="cmJS">JavaScript:</label>
+                            <div class="controls">
+                                <input class="input-medium" type="text" id="cmJS" placeholder="Enter cm javascript">
+                            </div>
+                        </div>
+                        
+                        <!-- Text Icon -->
+                        <div class="control-group">
+                            <label class="control-label" for="cmTextIcon">Text Icon:</label>
+                            <div class="controls">
+                                <select class="input-small" id="cmTextIcon">
+                                    <option value="true">True</option>
+                                    <option value="false" selected="">False</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Debug -->
+                        <div class="control-group">
+                            <label class="control-label" for="cmDebug">Debug:</label>
+                            <div class="controls">
+                                <select class="input-small" id="cmDebug">
+                                    <option value="true">True</option>
+                                    <option value="false" selected="">False</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Load/Reset-->
+                        <div class="control-group">
+                            <div class="controls">
+                                <button class="btn btn-primary" id="loadConsentButton"><i class="icon-circle-arrow-down icon-white"></i> Load Consent</button>
+                                <button class="btn btn-inverse" id="resetConsentFieldsButton"><i class="icon-refresh icon-white"></i> Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+        
+        <!-- CM Icon -->
+        <div class="row-fluid">
+            <div class="span12">
+                <fieldset>
+                    <legend><small>CM Icon</small></legend>
+                    <div id="1"></div>
+                </fieldset>
+            </div>
+        </div>        
+        
+    </div>
+</div>
+                                <div class="tab-pane fade" id="cmApi">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <!-- CM API First Party -->
+            <div class="span5">
+                <fieldset>
+                    <legend>Consent Manager API</legend>
+                    <form class="form-horizontal">
+                        <!-- Asking Domain -->
+                        <div class="control-group">
+                            <label class="control-label" for="aDomain">Asking Domain:</label>
+                            <div class="controls">
+                                <input class="input-medium" type="text" id="aDomain" disabled="">
+                            </div>
+                        </div>
+                        <!-- Target Domain -->
+                        <div class="control-group">
+                            <label class="control-label" for="tDomain">Target Domain:</label>
+                            <div class="controls">
+                                <input class="input-medium" type="text" id="tDomain" placeholder="Enter Target domain">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <a class="btn btn-info btn-small" id="getConsentButton"><i class="icon-wrench icon-white"></i> Get Consent </a>
+                                <a class="btn btn-info btn-small" id="getConsentDecisionButton"><i class="icon-wrench icon-white"></i> Get Consent Decision </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Report Level -->
+                        <div class="control-group">
+                            <label class="control-label" for="reportLevel">Report Level:</label>
+                            <div class="controls">
+                                <div id="selectReportLevel">
+                                    <select class="input-small" id="reportLevel" onchange="cmtest.reportLevelChange(this);">
+                                        <option value="1" selected="">1</option>
+                                        <option value="2">2</option>
+                                        <option value="4">4</option>
+                                        <option value="8">8</option>
+                                        <option value="16">16</option>
+                                        <option value="32">32</option>
+                                        <option value="64">64</option>
+                                        <option value="128">128</option>
+                                        <option value="specify">specify</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="input-append" id="inputReportLevel" style="display: none;">
+                                    <input type="text" class="span6" id="reportLevelInput">
+                                    <button type="button" class="btn btn-inverse" onclick="cmtest.changeReportLevelInput(0);">
+                                      back 
+                                    </button>
+                                </div>
+                            </div>
+                         </div>   
+                         <div class="control-group">
+                             <div class="controls">
+                                 <a class="btn btn-info btn-small" id="setReportLevel"><i class="icon-wrench icon-white"></i> Set </a>
+                             </div>
+                         </div>
+                    </form>
+                </fieldset>
+            </div>
+            
+            <!-- Third Party iframe -->
+            <div class="span7">
+                <fieldset>
+                    <legend>Third Party iframe</legend>
+                    <div id="thirdpartyframe"><iframe src="./✖ QA Test Page_files/thirdparty.html" width="245" height="125" id="postMsg" scrolling="no"></iframe></div>
+                </fieldset>
+            </div>
+        </div>
+        
+        <div class="row-fluid">
+            <!-- API Output -->
+            <div class="span5">
+                <fieldset>
+                    <legend>API Output</legend>
+                    <div id="apiOutput"></div>
+                </fieldset>
+            </div>
+            
+            <!-- thir party frame request/response message-->
+            <div class="span7">
+            	<fieldset>
+                    <legend>Third party iframe messages</legend>
+                    <pre class="pre-scrollable" id="thirdPartyMessagesLog"></pre>
+                    <button class="btn btn-inverse" id="clearThirdPartyMessagesLog"><i class="icon-remove icon-white"></i> Clear Messages</button>
+                </fieldset>
+            </div>
+            
+        </div>
+    </div>
+</div>                                <div class="tab-pane fade" id="cmData">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <fieldset>
+                    <legend>Browser Data</legend>
+                    
+                    <div class="tabbable"> <!-- Only required for left/right tabs -->
+                      <ul class="nav nav-tabs">
+                        <li class="active"><a href="http://auto-eu-consent.truste-svc.net/qa/qatestpage/index.php?#cookies" data-toggle="tab" onclick="cmtest.displayCookies();">Cookies</a></li>
+                        <li><a href="http://auto-eu-consent.truste-svc.net/qa/qatestpage/index.php?#localStorage" data-toggle="tab" onclick="cmtest.displayStorage(&#39;local&#39;);">Local Storage</a></li>
+                        <li><a href="http://auto-eu-consent.truste-svc.net/qa/qatestpage/index.php?#sessionStorage" data-toggle="tab" onclick="cmtest.displayStorage(&#39;session&#39;);">Session Storage</a></li>
+                      </ul>
+                      <div class="tab-content">
+                        
+                        <div class="tab-pane active fade in" id="cookies">
+                          
+                        </div>
+                        
+                        <div class="tab-pane fade" id="localStorage">
+                          
+                        </div>
+                        
+                        <div class="tab-pane fade in" id="sessionStorage">
+                          
+                        </div>
+                        
+                      </div>
+                    </div>
+                    
+                </fieldset>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <fieldset>
+                    <legend>Consent Manager Event Log</legend>
+                    <pre class="pre-scrollable" id="log"><div class="alert alert-info">Third party frame removed</div><div class="alert alert-info">Previous window message API listener removed</div><div class="alert alert-info">New window message API listener added</div></pre>
+                    <button class="btn btn-inverse" id="clearLog"><i class="icon-remove icon-white"></i> Clear Log</button>
+                </fieldset>
+            </div>
+        </div>
+    </div>    
+</div>                                <div class="tab-pane fade" id="cmReport">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span5">
+                <fieldset>
+                    <legend>Click Reporting Test</legend>
+                </fieldset>
+                
+                <label>Close Clicks</label>
+                <input class="changing-input" value="0" required="required" type="number" id="close" placeholder="0">
+                
+                <label>Agree Clicks</label>
+                <input class="changing-input" value="0" type="number" id="agree" placeholder="0">
+                
+                <label>Required Clicks</label>
+                <input class="changing-input" value="0" type="number" id="required" placeholder="0">
+                
+                <label>Functional Clicks</label>
+                <input class="changing-input" value="0" type="number" id="functional" placeholder="0">
+                
+                <label>Advertising Clicks</label>
+                <input class="changing-input" value="0" type="number" id="advertising" placeholder="0">
+                
+                <label>More Info Clicks</label>
+                <input class="changing-input" value="0" type="number" id="moreinfo" placeholder="0">
+                
+                <br>
+                <button class="btn btn-primary" onclick="cmtest.runAutomation()">Run automation</button>
+            </div>
+            
+            <div class="span7">
+            	<div>
+            		<legend>Expected Result</legend>
+            		<p id="expected">
+            			Icon clicks = 0 <br>
+            			Close clicks = 0 <br>
+            			Agree clicks = 0 <br>
+            			Required clicks = 0 <br>
+            			Functional clicks = 0 <br>
+            			Advertising clicks = 0 <br>
+            			More Info clicks = 0 <br>
+            		</p>
+            	</div>
+            	
+            	<div>
+            		<legend id="console-title">Console Output</legend>
+            		<div style="width: 100%; height: 200px;" class="resizable ui-resizable">
+            			<iframe style="border: 1px solid #e5e5e5;width: 100%; height: 100%; background: white" src="./✖ QA Test Page_files/saved_resource.html" id="console"></iframe>
+            		<div class="ui-resizable-handle ui-resizable-e" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 1000;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 1000;"></div></div>
+            	</div>
+            </div>
+        </div>
+    </div>
+</div>				                                <div class="tab-pane fade in" id="adsIcon">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <fieldset>
+                    <legend>Ads Icon Loader</legend>
+                    <form class="form-horizontal" onsubmit="">
+                        <!-- Icon server host -->
+                        <div class="control-group">
+                            <label class="control-label" for="iconServerHost">Server:</label>
+                            <div class="controls">
+                            	<select id="iconServerHost">
+                            		<option value="icon-qa-sf.truste-svc.net">QA</option>
+                            		<option value="icon-dev.intranet.truste-labs.com">Dev</option>
+                            		<option value="auto-icon.intranet.truste-labs.com">Automation</option>
+                            		<option value="choices.truste.com">Production</option>
+                            		<option value="ami-adchoices-icon.truste-svc.net">Staging</option>
+                            	</select>
+
+                            </div>
+                        </div>
+                        <!-- AID -->
+                        <div class="control-group">
+                            <label class="control-label" for="iconAid">Advertiser ID:</label>
+                            <div class="controls">
+                                <input class="input-medium" type="text" id="iconAid" placeholder="Enter aid" value="mata01">
+                            </div>
+                        </div>
+                        <!-- PID -->
+                        <div class="control-group">
+                            <label class="control-label" for="iconPid">Partner ID:</label>
+                            <div class="controls">
+                                <input class="input-medium" type="text" id="iconPid" placeholder="Enter pid" value="mata01">
+                            </div>
+                        </div>
+                        
+                        <!-- CID -->
+                        <div class="control-group">
+                            <label class="control-label" for="iconCid">Campaign ID:</label>
+                            <div class="controls">
+                                <input class="input-medium" type="text" id="iconCid" placeholder="Enter cid" value="testpageGenerated">
+                            </div>
+                        </div>
+                        
+                        <!-- Atlas ID -->
+                        <div class="control-group">
+                            <label class="control-label" for="iconAtlasId">Atlas ID:</label>
+                            <div class="controls">
+                                <input class="input-medium" type="text" id="iconAtlasId" placeholder="42424242">
+                            </div>
+                        </div>
+                        
+                        <!-- Admarker -->
+                        <div class="control-group">
+                            <label class="control-label" for="iconAdmarker">AdMarker:</label>
+                            <div class="controls">
+                                <input class="input-medium" type="text" id="iconAdmarker" placeholder="dynamic" value="dynamic">
+                            </div>
+                        </div>
+                        
+                        <!-- Protocol -->
+                        <div class="control-group">
+                            <label class="control-label" for="iconProtocol">Protocol:</label>
+                            <div class="controls">
+                                <select class="input-small" id="iconProtocol">
+                                    <option value="http" selected="">http</option>
+                                    <option value="https">https</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Placement -->
+                        <div class="control-group">
+                            <label class="control-label" for="iconPlacement">Placement:</label>
+                            <div class="controls">
+                                <select class="input-small" id="iconPlacement">
+                                    <option value="tr" selected="">tr</option>
+                                    <option value="tl">tl</option>
+                                    <option value="br">br</option>
+                                    <option value="bl">bl</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- CAM -->
+                        <div class="control-group">
+                            <label class="control-label" for="iconCam">Clear AdMarker:</label>
+                            <div class="controls">
+                                <select class="input-small" id="iconCam">
+                                    <option value="0" selected="">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- JS -->
+                        <div class="control-group">
+                            <label class="control-label" for="iconJs">JS:</label>
+                            <div class="controls">
+                                <input class="input-medium" type="text" id="iconJs" placeholder="Enter js" value="0">
+                            </div>
+                        </div>
+                        
+                        <!-- Width -->
+                        <div class="control-group">
+                            <label class="control-label" for="iconWidth">Width:</label>
+                            <div class="controls">
+                                <input class="input-medium" type="text" id="iconWidth" placeholder="Enter width" value="300">
+                            </div>
+                        </div>
+                        
+                        <!-- Height -->
+                        <div class="control-group">
+                            <label class="control-label" for="iconHeight">Height:</label>
+                            <div class="controls">
+                                <input class="input-medium" type="text" id="iconHeight" placeholder="Enter height" value="250">
+                            </div>
+                        </div>
+                        
+                        <!-- Load/Reset-->
+                        <div class="control-group">
+                            <div class="controls">
+                                <button class="btn btn-primary" id="loadIconButton"><i class="icon-circle-arrow-down icon-white"></i> Load Icon</button>
+                                <button class="btn btn-inverse" id="resetIconFieldsButton"><i class="icon-refresh icon-white"></i> Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+        
+        <!-- Ads Icon -->
+        <div class="row-fluid">
+            <div class="span12">
+                <fieldset>
+                    <legend><small>Ad Icon</small></legend>
+                    <div id="2">
+                    	<iframe style="display: none;" id="2-iframe" src="./✖ QA Test Page_files/saved_resource(1).html">
+                    	</iframe>
+	                    <div class="alert alert-block" id="adIconLoadingMessage" style="display:none;">
+						  Loading...
+						</div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>        
+        
+    </div>
+</div>
+                                <div class="tab-pane fade in" id="cmUtIt">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <fieldset>
+                    <input type="label" id="qunit-title" value="Consent Manager API Unit Test Results" style="display:none;">
+                    <div id="qunit" style="display: block;"><h1 id="qunit-header"><a href="http://auto-eu-consent.truste-svc.net/qa/qatestpage/index.php">Consent Manager API Unit Test Results</a> </h1><h2 id="qunit-banner" class="qunit-fail"></h2><div id="qunit-testrunner-toolbar"><input type="checkbox" id="qunit-filter-pass"><label for="qunit-filter-pass" title="Only show tests and assertons that fail. Stored in sessionStorage.">Hide passed tests</label><span><input id="qunit-urlconfig-noglobals" name="noglobals" type="checkbox" title="Enabling this will test if any test introduces new properties on the `window` object. Stored as query-strings."><label for="qunit-urlconfig-noglobals" title="Enabling this will test if any test introduces new properties on the `window` object. Stored as query-strings.">Check for Globals</label><input id="qunit-urlconfig-notrycatch" name="notrycatch" type="checkbox" title="Enabling this will run tests outside of a try-catch block. Makes debugging exceptions in IE reasonable. Stored as query-strings."><label for="qunit-urlconfig-notrycatch" title="Enabling this will run tests outside of a try-catch block. Makes debugging exceptions in IE reasonable. Stored as query-strings.">No try-catch</label></span></div><h2 id="qunit-userAgent">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36</h2><p id="qunit-testresult" class="result">Tests completed in 1088 milliseconds.<br><span class="passed">13</span> assertions of <span class="total">17</span> passed, <span class="failed">4</span> failed.</p><ol id="qunit-tests"><li class="fail" id="qunit-test-output0"><strong><span class="module-name">tconsole</span>: <span class="test-name">tconsole</span> <b class="counts">(<b class="failed">1</b>, <b class="passed">0</b>, 1)</b></strong><span class="runtime">4 ms</span><ol class="qunit-assert-list"><li class="fail"><span class="test-message">Died on test #1     at QUnit.test.global.test (http://auto-eu-consent.truste-svc.net/qa/qatestpage/plugins/sinon/sinon-qunit-1.0.0.js:60:16)
+    at cmut.startUT (http://auto-eu-consent.truste-svc.net/qa/qatestpage/js/cmUtIt.js:155:6): TRUSTE_CMAPI_DEBUG is not defined</span><table><tbody><tr class="test-source"><th>Source: </th><td><pre>ReferenceError: TRUSTE_CMAPI_DEBUG is not defined
+    at Object.cmut.tconsole (http://auto-eu-consent.truste-svc.net/qa/qatestpage/js/cmUtIt.js:9:8)
+    at Object.&lt;anonymous&gt; (http://auto-eu-consent.truste-svc.net/qa/qatestpage/plugins/sinon/sinon-1.7.1.js:3987:35)</pre></td></tr></tbody></table></li></ol></li><li class="fail" id="qunit-test-output1"><strong><span class="module-name">isCapable</span>: <span class="test-name">isCapable</span> <b class="counts">(<b class="failed">1</b>, <b class="passed">0</b>, 1)</b></strong><span class="runtime">0 ms</span><ol class="qunit-assert-list"><li class="fail"><span class="test-message">Died on test #1     at QUnit.test.global.test (http://auto-eu-consent.truste-svc.net/qa/qatestpage/plugins/sinon/sinon-qunit-1.0.0.js:60:16)
+    at cmut.startUT (http://auto-eu-consent.truste-svc.net/qa/qatestpage/js/cmUtIt.js:155:6): TRUSTE_CMAPI_DEBUG is not defined</span><table><tbody><tr class="test-source"><th>Source: </th><td><pre>ReferenceError: TRUSTE_CMAPI_DEBUG is not defined
+    at Object.cmut.isCapable (http://auto-eu-consent.truste-svc.net/qa/qatestpage/js/cmUtIt.js:28:25)
+    at Object.&lt;anonymous&gt; (http://auto-eu-consent.truste-svc.net/qa/qatestpage/plugins/sinon/sinon-1.7.1.js:3987:35)</pre></td></tr></tbody></table></li></ol></li><li class="fail" id="qunit-test-output2"><strong><span class="module-name">getJSON</span>: <span class="test-name">getJSON</span> <b class="counts">(<b class="failed">1</b>, <b class="passed">0</b>, 1)</b></strong><span class="runtime">0 ms</span><ol class="qunit-assert-list"><li class="fail"><span class="test-message">Died on test #1     at QUnit.test.global.test (http://auto-eu-consent.truste-svc.net/qa/qatestpage/plugins/sinon/sinon-qunit-1.0.0.js:60:16)
+    at cmut.startUT (http://auto-eu-consent.truste-svc.net/qa/qatestpage/js/cmUtIt.js:155:6): TRUSTE_CMAPI_DEBUG is not defined</span><table><tbody><tr class="test-source"><th>Source: </th><td><pre>ReferenceError: TRUSTE_CMAPI_DEBUG is not defined
+    at Object.cmut.getJSON (http://auto-eu-consent.truste-svc.net/qa/qatestpage/js/cmUtIt.js:49:18)
+    at Object.&lt;anonymous&gt; (http://auto-eu-consent.truste-svc.net/qa/qatestpage/plugins/sinon/sinon-1.7.1.js:3987:35)</pre></td></tr></tbody></table></li></ol></li><li class="fail" id="qunit-test-output3"><strong><span class="module-name">getStorage</span>: <span class="test-name">getStorage</span> <b class="counts">(<b class="failed">1</b>, <b class="passed">0</b>, 1)</b></strong><span class="runtime">0 ms</span><ol class="qunit-assert-list"><li class="fail"><span class="test-message">Expected at least one assertion, but none were run - call expect(0) to accept zero assertions.</span><table><tbody><tr class="test-source"><th>Source: </th><td><pre>    at QUnit.test.global.test (http://auto-eu-consent.truste-svc.net/qa/qatestpage/plugins/sinon/sinon-qunit-1.0.0.js:60:16)
+    at cmut.startUT (http://auto-eu-consent.truste-svc.net/qa/qatestpage/js/cmUtIt.js:155:6)</pre></td></tr></tbody></table></li></ol></li><li class="pass" id="qunit-test-output4"><strong><span class="module-name">init</span>: <span class="test-name">init</span> <b class="counts">(<b class="failed">0</b>, <b class="passed">1</b>, 1)</b></strong><span class="runtime">1 ms</span><ol class="qunit-assert-list qunit-collapsed"><li class="pass"><span class="test-message">Passed!</span></li></ol></li><li class="pass" id="qunit-test-output5"><strong><span class="module-name">loadConsentDecision</span>: <span class="test-name">loadConsentDecision</span> <b class="counts">(<b class="failed">0</b>, <b class="passed">1</b>, 1)</b></strong><span class="runtime">0 ms</span><ol class="qunit-assert-list qunit-collapsed"><li class="pass"><span class="test-message">Passed!</span></li></ol></li><li class="pass" id="qunit-test-output6"><strong><span class="module-name">sendEvent</span>: <span class="test-name">sendEvent</span> <b class="counts">(<b class="failed">0</b>, <b class="passed">1</b>, 1)</b></strong><span class="runtime">0 ms</span><ol class="qunit-assert-list qunit-collapsed"><li class="pass"><span class="test-message">Passed!</span></li></ol></li><li class="pass" id="qunit-test-output7"><strong><span class="module-name">sendError</span>: <span class="test-name">sendError</span> <b class="counts">(<b class="failed">0</b>, <b class="passed">1</b>, 1)</b></strong><span class="runtime">0 ms</span><ol class="qunit-assert-list qunit-collapsed"><li class="pass"><span class="test-message">Passed!</span></li></ol></li><li class="pass" id="qunit-test-output8"><strong><span class="module-name">sendPost</span>: <span class="test-name">sendPost</span> <b class="counts">(<b class="failed">0</b>, <b class="passed">1</b>, 1)</b></strong><span class="runtime">0 ms</span><ol class="qunit-assert-list qunit-collapsed"><li class="pass"><span class="test-message">Passed!</span></li></ol></li><li class="pass" id="qunit-test-output9"><strong><span class="module-name">isAuthorized</span>: <span class="test-name">isAuthorized</span> <b class="counts">(<b class="failed">0</b>, <b class="passed">1</b>, 1)</b></strong><span class="runtime">0 ms</span><ol class="qunit-assert-list qunit-collapsed"><li class="pass"><span class="test-message">Passed!</span></li></ol></li><li class="pass" id="qunit-test-output10"><strong><span class="module-name">sendUpdatesTo</span>: <span class="test-name">sendUpdatesTo</span> <b class="counts">(<b class="failed">0</b>, <b class="passed">1</b>, 1)</b></strong><span class="runtime">0 ms</span><ol class="qunit-assert-list qunit-collapsed"><li class="pass"><span class="test-message">Passed!</span></li></ol></li><li class="pass" id="qunit-test-output11"><strong><span class="module-name">getBType</span>: <span class="test-name">getBType</span> <b class="counts">(<b class="failed">0</b>, <b class="passed">1</b>, 1)</b></strong><span class="runtime">0 ms</span><ol class="qunit-assert-list qunit-collapsed"><li class="pass"><span class="test-message">Passed!</span></li></ol></li><li class="pass" id="qunit-test-output12"><strong><span class="module-name">getTypePermission</span>: <span class="test-name">getTypePermission</span> <b class="counts">(<b class="failed">0</b>, <b class="passed">1</b>, 1)</b></strong><span class="runtime">1 ms</span><ol class="qunit-assert-list qunit-collapsed"><li class="pass"><span class="test-message">Passed!</span></li></ol></li><li class="pass" id="qunit-test-output13"><strong><span class="module-name">updatePreferences</span>: <span class="test-name">updatePreferences</span> <b class="counts">(<b class="failed">0</b>, <b class="passed">1</b>, 1)</b></strong><span class="runtime">0 ms</span><ol class="qunit-assert-list qunit-collapsed"><li class="pass"><span class="test-message">Passed!</span></li></ol></li><li class="pass" id="qunit-test-output14"><strong><span class="module-name">apiDo</span>: <span class="test-name">apiDo</span> <b class="counts">(<b class="failed">0</b>, <b class="passed">1</b>, 1)</b></strong><span class="runtime">0 ms</span><ol class="qunit-assert-list qunit-collapsed"><li class="pass"><span class="test-message">Passed!</span></li></ol></li><li class="pass" id="qunit-test-output15"><strong><span class="module-name">processMessage</span>: <span class="test-name">processMessage</span> <b class="counts">(<b class="failed">0</b>, <b class="passed">1</b>, 1)</b></strong><span class="runtime">0 ms</span><ol class="qunit-assert-list qunit-collapsed"><li class="pass"><span class="test-message">Passed!</span></li></ol></li><li class="pass" id="qunit-test-output16"><strong><span class="module-name">messageListener</span>: <span class="test-name">messageListener</span> <b class="counts">(<b class="failed">0</b>, <b class="passed">1</b>, 1)</b></strong><span class="runtime">0 ms</span><ol class="qunit-assert-list qunit-collapsed"><li class="pass"><span class="test-message">Passed!</span></li></ol></li></ol></div>
+                    <div id="qunit-fixture" style="display: block;"></div>
+                    <div class="alert" id="noCmIconAlert" style="display: none;">
+                       <button type="button" class="close" data-dismiss="alert">×</button>
+                       Unable to start notice.js.0.tmpl's unit test, cm icon not loaded
+                    </div>
+                    <div class="progress progress-striped active center" id="checkCmLoad" style="display:none;">
+  						<div id="checkCmLoadBar" class="bar" style="width: 272px;">Executing 17 of 19 unit test</div>
+					</div>
+                    <script type="text/javascript" src="./✖ QA Test Page_files/qunit-1.11.0.js"></script>
+                    <script type="text/javascript" src="./✖ QA Test Page_files/sinon-1.7.1.js"></script>
+                    <script type="text/javascript" src="./✖ QA Test Page_files/sinon-qunit-1.0.0.js"></script>
+                    <script type="text/javascript" src="./✖ QA Test Page_files/cmUtIt.js"></script>
+                </fieldset>
+			</div>
+		</div>
+	</div>
+</div>				<div class="tab-pane fade active in" id="htmlEdit">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="edit">
+                <fieldset>
+                <legend>Real Time Editor</legend>	
+		<iframe src="./✖ QA Test Page_files/index.html" width="100%" height="700px"></frame>
+ 		<!-- <iframe  src="/qa/qatestpage/htmledit/htmledit.squarefree.com/index.html" width="1200px" height="700px" ></frame> -->
+		</fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+	
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+
+</html>
+</iframe></fieldset></div></div></div></div></div></div></div></div></div></div><script type="text/javascript" src="./✖ QA Test Page_files/notice"></script></body></html>

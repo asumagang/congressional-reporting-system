@@ -6,11 +6,13 @@ import { ActiveusersRoutingModule } from './activeusers-routing.module';
 import { ActiveusersComponent } from './activeusers.component';
 
 import { RouterModule } from '@angular/router';
+import { EdituserComponent } from './edituser/edituser.component';
+import { DeleteuserComponent } from './deleteuser/deleteuser.component';
 
 
 
 @NgModule({
-  declarations: [ActiveusersComponent],
+  declarations: [ActiveusersComponent, EdituserComponent, DeleteuserComponent],
   imports: [
     CommonModule,
     ActiveusersRoutingModule,
@@ -19,7 +21,7 @@ import { RouterModule } from '@angular/router';
     NgbModalModule,
     RouterModule,
   ],
-  entryComponents:[]
+  entryComponents:[EdituserComponent,DeleteuserComponent]
 
 })
 export class ActiveusersModule { }

@@ -1,6 +1,6 @@
 <div class="mt-1">
     <div class="container-fluid">
-        <button class="btn btn-light float-right mb-2" (click)="openProgramForm(null)">Add User</button>
+        <button class="btn btn-light float-right mb-2" (click)="openUserForm(null)">Add User</button>
         <div class=" searchbar">
            <input type="text" class="form-control form-control-sm " placeholder="Search User"  [(ngModel)]="searchText"
            (ngModelChange)="onSearch()">
@@ -23,8 +23,8 @@
                <td>{{user.address}}</td>
                <td>{{user.mobileno}}</td>
                <td>{{user.username}}</td>
-               <td><button class="btn btn-primary btn-sm " (click)="openProgramForm(program)">Edit</button>
-                 <button class="btn btn-danger btn-sm ml-1" (click)="onDelete(program)">Delete</button>
+               <td><button class="btn btn-primary btn-sm " (click)="openUserForm(user)">Edit</button>
+                 <button class="btn btn-danger btn-sm ml-1" (click)="onDelete(user)">Delete</button>
                </td>
              </tr>
            </tbody>
