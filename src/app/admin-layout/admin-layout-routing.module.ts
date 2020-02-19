@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { ReportsComponent } from '../reports/reports.component';
 import { AdminLayoutComponent } from './admin-layout.component';
+import { InsertdataformComponent } from '../insertdataform/insertdataform.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,8 @@ const routes: Routes = [
       {
         path: 'reports', component: ReportsComponent
       },
+
+      
       { path: 'insertdata', loadChildren: () => import(`../insertdata/insertdata.module`).then(m => m.InsertdataModule) },
       { path: 'programs', loadChildren: () => import(`../programs/programs.module`).then(m => m.ProgramsModule) },
       { path: 'profile', loadChildren: () => import(`../profile/profile.module`).then(m => m.ProfileModule) },

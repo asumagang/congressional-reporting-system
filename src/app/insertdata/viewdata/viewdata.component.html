@@ -1,136 +1,141 @@
+
+
 <div class="container-fluid ">
-    <!-- Large modal -->
-    <form class="formdesign">
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <button
-            type="button"
-            class="btn btn-outline-primary btn-sm btnimage"
-            data-toggle="modal"
-            data-target=".bd-example-modal-lg"
-          >
-          <img src="/assets/plus.png" alt="">  Add
-          </button>
-          <button
-          type="button"
-          class="btn btn-outline-primary btn-sm btnimage ml-3"
-          data-toggle="modal"
-          data-target="#exampleModalCenter"
-        >
-        <img src="/assets/download.png" alt=""> 
-        Download Format
-        </button>
-          <button
-            type="button"
-            class="btn btn-outline-primary btn-sm btnimage ml-3"
-            data-toggle="modal"
-            data-target="#exampleModalCenter"
-          >
-          <img src="/assets/excel.png" alt=""> 
-          Import CSV file
-          </button>
-        </div>
-        <div class="form-group col-md-6">
+  <!-- Large modal -->
+  <form class="formdesign">
+    <div class="form-row">
+      <div class="form-group col-md-10">
           <input
-            class="form-control "
-            type="text"
-            placeholder="Search"
-            aria-label="Search"
-          />
-        </div>
+          class="form-control form-control-sm"
+          type="text"
+          placeholder="Search"
+          aria-label="Search"
+        />
+         
       </div>
-      <div class="form-row mar">
-        <div class="form-group col-md-4">
-          <select id="inputState" class="form-control form-control-sm">
-            <option>Programs</option>
-            <option>All</option>
-            <option>Pantawid Pamilya</option>
-          </select>
-        </div>
-        <div class="form-group col-md-4">
-          <select id="inputState" class="form-control form-control-sm">
-            <option>Province</option>
-            <option>Cebu</option>
-            <option>Bohol</option>
-            <option>Siquijor</option>
-          </select>
-        </div>
-        <div class="form-group col-md-4">
-          <select id="inputState" class="form-control form-control-sm">
-            <option>Districts</option>
-            <option>District 1</option>
-            <option>District 2</option>
-          </select>
-        </div>
+      <div class="form-group col-md-2">
+          <button class="btn btn-light btn-sm ml-5" (click)="openinsertdataform()">Insert Data</button>
+          <div class="dropdown float-right">
+              <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item btnimage" href="#"><img src="/assets/download.png" alt="" /> Download Format</a>
+                <a class="dropdown-item btnimage" href="#">  <img src="/assets/excel.png" alt="" /> Import CSV file</a>
+              </div>
+            </div>
+          <!-- <button
+            type="button"
+            class="btn btn-primary btn-sm btnimage"
+            placement="top"
+            ngbTooltip="Insert Data"
+            (click)="openinsertdataform()"
+          >
+            <img src="/assets/plus.png" alt="" />
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary btn-sm btnimage ml-3"
+            placement="top"
+            ngbTooltip="Download Format"
+          >
+            <img src="/assets/download1.png" alt="" />
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary btn-sm btnimage ml-3"
+            placement="top"
+            ngbTooltip=" Import CSV file"
+          >
+            <img src="/assets/excel.png" alt="" />
+           
+          </button> -->
       </div>
-    </form>
-  
-    
-  
-    
-  
-    <table class="table table-hover table-sm mar ">
-      <thead>
-        <tr>
-          <th>District</th>
-          <th>Municility</th>
-          <th>Number of Beneficiaries</th>
-          <th>Amount Disbursed</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1st District</td>
-          <td>Minglanilla</td>
-          <td>12000233</td>
-          <td>182929285</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>1st District</td>
-          <td>Minglanilla</td>
-          <td>12000233</td>
-          <td>18000100</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>1st District</td>
-          <td>Minglanilla</td>
-          <td>12000233</td>
-          <td>13567899</td>
-          <td></td>
-        </tr> 
-      </tbody>
-    </table>
-    
-  </div>
-  <div class="fixed-bottom totaldiv">
-    <form>
-      <div class="form-row">
-        <div class="form-group col-md-3">
-          <label class=" col-form-label-sm" 
-            >Provincial Total No. of Beneficiaries</label
-          >
-          <input class="form-control form-control-sm mar" />
-        </div>
-        <div class="form-group col-md-3">
-          <label class=" col-form-label-sm"
-            >Provincial Total Amount Disbursed</label
-          >
-          <input class="form-control form-control-sm mar" />
-        </div>
-        <div class="form-group col-md-3">
-          <label class=" col-form-label-sm"
-            >District Total No. of Beneficiaries</label
-          >
-          <input class="form-control form-control-sm mar" />
-        </div>
-        <div class="form-group col-md-3">
-          <label class=" col-form-label-sm"
-            >District Total Amount Disbursed</label
-          >
-          <input class="form-control form-control-sm mar" />
-        </div>
+    </div>
+    <div class="form-row mar">
+      <div class="form-group col-md-4">
+        <select id="inputState" class="form-control form-control-sm">
+          <option [ngValue]="program" *ngFor="let program of programs">{{program.name}}</option>
+        </select>
       </div>
-    </form>
-  </div>
+      <div class="form-group col-md-4">
+        <select id="inputState" class="form-control form-control-sm">
+          <option>Province</option>
+          <option>Cebu</option>
+          <option>Bohol</option>
+          <option>Siquijor</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <select id="inputState" class="form-control form-control-sm">
+          <option>Districts</option>
+          <option>District 1</option>
+          <option>District 2</option>
+        </select>
+      </div>
+    </div>
+  </form>
+
+  <table class="table table-hover table-sm mar ">
+    <thead>
+      <tr>
+        <th>District</th>
+        <th>Municipality</th>
+        <th>Number of Beneficiaries</th>
+        <th>Amount Disbursed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1st District</td>
+        <td>Minglanilla</td>
+        <td>12000233</td>
+        <td>182929285</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>1st District</td>
+        <td>Minglanilla</td>
+        <td>12000233</td>
+        <td>18000100</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>1st District</td>
+        <td>Minglanilla</td>
+        <td>12000233</td>
+        <td>13567899</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="fixed-bottom totaldiv">
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <label class=" col-form-label-sm"
+          >Provincial Total No. of Beneficiaries</label
+        >
+        <input class="form-control form-control-sm mar" />
+      </div>
+      <div class="form-group col-md-3">
+        <label class=" col-form-label-sm"
+          >Provincial Total Amount Disbursed</label
+        >
+        <input class="form-control form-control-sm mar" />
+      </div>
+      <div class="form-group col-md-3">
+        <label class=" col-form-label-sm"
+          >District Total No. of Beneficiaries</label
+        >
+        <input class="form-control form-control-sm mar" />
+      </div>
+      <div class="form-group col-md-3">
+        <label class=" col-form-label-sm"
+          >District Total Amount Disbursed</label
+        >
+        <input class="form-control form-control-sm mar" />
+      </div>
+    </div>
+  </form>
+</div>
