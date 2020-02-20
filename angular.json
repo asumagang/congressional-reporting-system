@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Angular8JwtAuth"
+    }
+  },
+  "defaultProject": "Angular8JwtAuth",
+  "cli": {
+    "analytics": false
+  }
 }
