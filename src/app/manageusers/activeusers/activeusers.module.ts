@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
 import { EdituserComponent } from './edituser/edituser.component';
 import { DeleteuserComponent } from './deleteuser/deleteuser.component';
 
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+
 
 @NgModule({
   declarations: [ActiveusersComponent, EdituserComponent, DeleteuserComponent],
@@ -20,9 +20,8 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     NgbPaginationModule,
     NgbModalModule,
     RouterModule,
-    NgbModule
   ],
-  entryComponents:[EdituserComponent,DeleteuserComponent]
+  entryComponents:[EdituserComponent]
 
 })
 export class ActiveusersModule { }
