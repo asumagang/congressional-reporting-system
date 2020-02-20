@@ -4,7 +4,7 @@
   <!-- Large modal -->
   <form class="formdesign">
     <div class="form-row">
-      <div class="form-group col-md-10">
+      <div class="form-group col-md-6">
           <input
           class="form-control form-control-sm"
           type="text"
@@ -13,16 +13,10 @@
         />
          
       </div>
-      <div class="form-group col-md-2">
-          <button class="btn btn-light btn-sm ml-5" (click)="openinsertdataform()">Insert Data</button>
-          <div class="dropdown float-right">
-              <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item btnimage" href="#"><img src="/assets/download.png" alt="" /> Download Format</a>
-                <a class="dropdown-item btnimage" href="#">  <img src="/assets/excel.png" alt="" /> Import CSV file</a>
-              </div>
-            </div>
+      <div class="form-group col-md-6 btnimage">
+          <button class="btn btn-dark btn-sm ml-2 " (click)="openinsertdataform()"><img src="/assets/add.png" alt="" /> Insert Data</button>
+          <button class="btn btn-dark btn-sm ml-2 " ><img src="/assets/download.png" alt="" /> Download Format</button>
+          <button class="btn btn-dark btn-sm ml-2 "><img src="/assets/excel.png" alt="" /> Import CSV file</button>
           <!-- <button
             type="button"
             class="btn btn-primary btn-sm btnimage"
@@ -51,30 +45,25 @@
           </button> -->
       </div>
     </div>
+    
     <div class="form-row mar">
       <div class="form-group col-md-4">
         <select id="inputState" class="form-control form-control-sm">
-          <option [ngValue]="program" *ngFor="let program of programs">{{program.name}}</option>
+          <option [ngValue]="program" name="programselect" *ngFor="let program of programs">{{program.name}}</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <select  [(ngModel)]="provId" [ngModelOptions]="{standalone: true}" (change)="selected()" class="form-control form-control-sm">
+          <option [ngValue]="province" *ngFor="let province of provinces">{{province.name}}</option>
         </select>
       </div>
       <div class="form-group col-md-4">
         <select id="inputState" class="form-control form-control-sm">
-          <option>Province</option>
-          <option>Cebu</option>
-          <option>Bohol</option>
-          <option>Siquijor</option>
-        </select>
-      </div>
-      <div class="form-group col-md-4">
-        <select id="inputState" class="form-control form-control-sm">
-          <option>Districts</option>
-          <option>District 1</option>
-          <option>District 2</option>
+          <option [ngValue]="district" *ngFor="let district of districts">{{district.name}}</option>
         </select>
       </div>
     </div>
   </form>
-
   <table class="table table-hover table-sm mar ">
     <thead>
       <tr>
@@ -109,7 +98,8 @@
     </tbody>
   </table>
 </div>
-<div class="fixed-bottom totaldiv">
+<hr>
+<div class="totaldiv">
   <form>
     <div class="form-row">
       <div class="form-group col-md-3">
@@ -139,3 +129,4 @@
     </div>
   </form>
 </div>
+Province Is test:  {{provId | json}}

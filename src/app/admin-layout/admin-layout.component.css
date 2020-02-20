@@ -24,15 +24,27 @@
  
 
   .bg-dark1 {
-    background-color: #0499F9  ;
-    border-top-right-radius: 30px;
+    /* background-color: #373737  ; */
+    /* background-color: #0499F9  ; */
+    /* border-top-right-radius: 30px; */
+    /* background: #141E30; 
+background: -webkit-linear-gradient(to right, #243B55, #141E30);  
+background: linear-gradient(to right, #243B55, #141E30);  */
  
+/* background-color: #23272a; */
+background: #485563;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
   }
   .list-group-item{
-    background-color: #0499F9  ;
+    /* background-color: #0499F9  ; */
+    background-color: transparent  ;
     border-top-left-radius: 30px;
-    color: #E6E6E6 ;
- 
+    /* color: #E6E6E6 ; */
+    color: #B0B0B0 ;
+    font-size: 15px;
   }
   .list-group{
     margin-right: -15px;
@@ -42,7 +54,7 @@
     box-shadow: 0px 10px 10px -15px #111;
   }
   .list-group-item:hover{
-    background-color: #F6F6F6;
+    background-color: #F5F5F5;
     color: #B0B0B0 ;
     border-left: #59E40F  solid 5px;
   }
@@ -51,8 +63,10 @@
     background-color: white;
     color: black;
     border-left: #59E40F  solid 5px;
-
-
+  }
+  .active img{
+    background-color: #1D8BF9;
+    border: #1D8BF9 solid 2px;
   }
 
   .right{
@@ -64,7 +78,7 @@ i{
 }
 
 .side img{
-    width: 35px;
+    width: 25px;
     margin-right: 10px;
 }
 .logo img{
