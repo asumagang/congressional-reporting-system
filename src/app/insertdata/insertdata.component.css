@@ -1,10 +1,13 @@
 .active{
-    border-bottom: 2px solid #40DF2D;
+    background-color:#1089ff  ;
+    color: white ;
+    box-shadow: 0 0.5rem .5rem 0 rgba(2, 106, 175, 0.2);
 }
 .navbar a{
-    color: #9D9D9D ;
-    padding: 2px 12px;
+   
+    padding: 4px 16px;
     margin-right: 20px;
+    border-radius: 2px;
 }
 .divbody{
     position: relative;
