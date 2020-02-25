@@ -1,10 +1,13 @@
 import { District } from './district';
-import { Province } from './province';
+
 
 export interface Municipality {
     id: number;
     name: string;
-    province: Province,
+    targetbenes:number;
+    servedbenes:number;
+    amountallocated:number;
+    amountdisbursed:number;
     district:District,
   }
   

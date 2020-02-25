@@ -12,39 +12,13 @@ export class DistrictService {
 
   constructor(private http: HttpClient) {}
 
-  //Add 
-  addDistrict(district: District): Observable<District> {
-    return this.http.post<District>(this.baseUrl, district);
-  }
-
-  //Delete 
-  deleteDistrict(id: number): Observable<District> {
-    return this.http.delete<District>(`${this.baseUrl}/${id}`);
-  }
-
-  //Update todo : /todos/{id}
-  updateDistrict(district: District): Observable<District> {
-    return this.http.put<District>(`${this.baseUrl}/${district.id}`, district);
-  }
-
+    //Get all programs : /programs/all
+    getAllDistricts(): Observable<District[]> {
+      return this.http.get<District[]>(`${this.baseUrl}/provinces/all`);
+    }
+  
+    findByProvinceId(id: number): Observable<District> {
+      return this.http.get<District>(`${this.baseUrl}/provinces/${id}/districts`);
+    }
  
-
-  //Get 
-  getDistrict(id: number): Observable<District> {
-    return this.http.get<District>(`${this.baseUrl}/${id}`);
-  }
-
-  getDistrictByProvinceId(id: number): Observable<District> {
-    return this.http.get<District>(`${this.baseUrl}/province/${id}`);
-  }
-
-  findByProvinceId(id: number): Observable<District> {
-    return this.http.get<District>(`${this.baseUrl}/province/${id}/districts`);
-  }
-
-
-  //Get all Districts
-  getAllDistricts(): Observable<District[]> {
-    return this.http.get<District[]>(`${this.baseUrl}/all`);
-  }
 }

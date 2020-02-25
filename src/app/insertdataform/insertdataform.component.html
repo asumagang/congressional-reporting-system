@@ -37,13 +37,30 @@
                 >
                 <div class="col-sm-9">
                   <select
-                    id="inputState"
+                  [ngModelOptions]="{standalone: true}" [(ngModel)]="provId" (ngModelChange)="getProvId()"
                     class="form-control form-control-sm mar"
                   >
-                    <option [ngValue]="province" *ngFor="let province of provinces">{{province.name}}</option>
+                    <option [ngValue]="province.id" *ngFor="let province of provinces">{{province.name}}</option>
                   </select>
                 </div>
               </div>
+
+              <div class="form-group row">
+                <label
+                  for="colFormLabelSm"
+                  class="col-sm-3 col-form-label col-form-label-sm"
+                  >District</label
+                >
+                <div class="col-sm-9">
+                  <select
+                  [ngModelOptions]="{standalone: true}" [(ngModel)]="districtId" (ngModelChange)="getDistrictId()"
+                    class="form-control form-control-sm mar"
+                  >
+                    <option [ngValue]="district.id" *ngFor="let district of districts">{{district.name}}</option>
+                  </select>
+                </div>
+              </div>
+
               <div class="form-group row">
                 <label
                   for="colFormLabelSm"
@@ -55,7 +72,7 @@
                     id="inputState"
                     class="form-control form-control-sm mar"
                   >
-                    <option [ngValue]="municipality" *ngFor="let municipality of municipalities">{{municipality.name}}</option>
+                    <option [ngValue]="municipality.id" *ngFor="let municipality of municipalities">{{municipality.name}}</option>
                   </select>
                 </div>
               </div>

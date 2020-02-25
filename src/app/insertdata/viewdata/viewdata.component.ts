@@ -6,6 +6,8 @@ import { ProvinceService } from 'src/app/_services/province.service';
 import { Province } from 'src/app/_models/province';
 import { DistrictService } from 'src/app/_services/district.service';
 import { District } from 'src/app/_models/district';
+import { MunicipalityService } from '../../_services/municipality.service';
+import { Municipality } from '../../_models/municipality';
 
 @Component({
   selector: 'app-viewdata',
@@ -13,40 +15,46 @@ import { District } from 'src/app/_models/district';
   styleUrls: ['./viewdata.component.css']
 })
 export class ViewdataComponent implements OnInit {
-  programs: Program[];
   provinces:Province[];
-  districts:any;
+districts:any;
+programs:Program[];
+municipalities:Municipality[];
 
-
-  provId:number;
+provId: number = 1;
+districtId:number = null;
 
   constructor(
     private router:Router,
-    private programService:ProgramService,
     private provinceService:ProvinceService,
-    private districtService:DistrictService
-    
-    ) { }
+    private districtService:DistrictService,
+    private programService: ProgramService,
+    private municipalityService:MunicipalityService
+  ) { }
 
   ngOnInit() {
-    this.LoadPrograms();
     this.LoadProvinces();
-    this.LoadDistricts();
+    this.LoadPrograms();
   }
-  openinsertdataform(){
-    this.router.navigate( ["/insertdataform"] );
+    
+  selectOption(id: number) {
+    //getted from event
+    console.log(id);
+    //getted from binding
+    console.log(this.provId)
+  }
+getProvId(){
+  this.districtService.findByProvinceId(this.provId).subscribe(
+    data =>{
+      this.districts = data;
+      console.log(this.districts);
+    }
+  );
   }
   LoadProvinces(){
     this.provinceService.getAllProvinces().subscribe(
       data => {
         this.provinces = data;
-      }
-    );
-  }
-  LoadPrograms(){
-    this.programService.getAllPrograms().subscribe(
-      data => {
-        this.programs = data;
+ 
       }
     );
   }
@@ -57,7 +65,22 @@ export class ViewdataComponent implements OnInit {
       }
     );
   }
-  selected(){
-    console.log(this.provId)
+  LoadPrograms(){
+    this.programService.getAllPrograms().subscribe(data => {
+      this.programs = data;
+    });
+  }
+
+  openinsertdataform(){
+    this.router.navigate( ["/insertdataform"] );
+  }
+  
+  getDistrictId(){
+    this.municipalityService.findByDistrictId(this.districtId).subscribe(
+      data =>{
+        this.municipalities = data;
+        console.log(this.municipalities);
+      }
+    )
   }
 }

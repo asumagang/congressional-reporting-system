@@ -53,13 +53,13 @@
         </select>
       </div>
       <div class="form-group col-md-4">
-        <select  [(ngModel)]="provId" [ngModelOptions]="{standalone: true}" (change)="selected()" class="form-control form-control-sm">
-          <option [ngValue]="province" *ngFor="let province of provinces">{{province.name}}</option>
+        <select  [ngModelOptions]="{standalone: true}" [(ngModel)]="provId" (ngModelChange)="getProvId()" class="form-control form-control-sm">
+          <option [ngValue]="province.id" *ngFor="let province of provinces">{{province.name}}</option>
         </select>
       </div>
       <div class="form-group col-md-4">
-        <select id="inputState" class="form-control form-control-sm">
-          <option [ngValue]="district" *ngFor="let district of districts">{{district.name}}</option>
+        <select  [ngModelOptions]="{standalone: true}" [(ngModel)]="districtId" (ngModelChange)="getDistrictId()" class="form-control form-control-sm">
+          <option [ngValue]="district.id" *ngFor="let district of districts">{{district.name}}</option>
         </select>
       </div>
     </div>
@@ -67,39 +67,26 @@
   <table class="table table-hover table-sm mar ">
     <thead>
       <tr>
-        <th>District</th>
         <th>Municipality</th>
-        <th>Number of Beneficiaries</th>
+        <th>No. of Target Benes</th>
+        <th>No. of Served Benes</th>
+        <th>Amount Allocated</th>
         <th>Amount Disbursed</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1st District</td>
-        <td>Minglanilla</td>
-        <td>12000233</td>
-        <td>182929285</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>1st District</td>
-        <td>Minglanilla</td>
-        <td>12000233</td>
-        <td>18000100</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>1st District</td>
-        <td>Minglanilla</td>
-        <td>12000233</td>
-        <td>13567899</td>
-        <td></td>
+      <tr *ngFor="let municipality of municipalities">
+        <td>{{municipality.name}}</td>
+        <td>{{municipality.targetbenes}}</td>
+        <td>{{municipality.servedbenes}}</td>
+        <td>{{municipality.amountallocated}}</td>
+        <td>{{municipality.amountdisbursed}}</td>
       </tr>
     </tbody>
   </table>
 </div>
 <hr>
-<div class="totaldiv">
+<div class="totaldiv mb-4">
   <form>
     <div class="form-row">
       <div class="form-group col-md-3">
@@ -129,4 +116,3 @@
     </div>
   </form>
 </div>
-Province Is test:  {{provId | json}}

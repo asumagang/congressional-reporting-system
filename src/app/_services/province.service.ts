@@ -8,30 +8,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProvinceService {
-  baseUrl: string = `${environment.baseUrl}/api/test/province`;
+  baseUrl: string = `${environment.baseUrl}/api/test/provinces`;
   constructor(private http: HttpClient) {}
 
-  //Add program : /programs
-  addProvince(province: Province): Observable<Province> {
-    return this.http.post<Province>(this.baseUrl, province);
-  }
-
-  //Delete program : /program/{id}
-  deleteProvince(id: string): Observable<Province> {
-    return this.http.delete<Province>(`${this.baseUrl}/${id}`);
-  }
-
-  //Update user : /users/{id}
-  updateProvince(province: Province): Observable<Province> {
-    return this.http.put<Province>(`${this.baseUrl}/${province.id}`, province);
-  }
-
-
-  //Get 1 program from id : /programs/{id}
-  getProvince(id: string): Observable<Province> {
-    return this.http.get<Province>(`${this.baseUrl}/${id}`);
-  }
-
+  
   //Get all programs : /programs/all
   getAllProvinces(): Observable<Province[]> {
     return this.http.get<Province[]>(`${this.baseUrl}/all`);

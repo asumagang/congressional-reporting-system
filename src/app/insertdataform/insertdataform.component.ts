@@ -7,6 +7,8 @@ import { ProvinceService } from "../_services/province.service";
 import { Province } from "../_models/province";
 import { MunicipalityService } from '../_services/municipality.service';
 import { Municipality } from '../_models/municipality';
+import { DistrictService } from '../_services/district.service';
+import { District } from '../_models/district';
 
 @Component({
   selector: "app-insertdataform",
@@ -17,18 +19,24 @@ export class InsertdataformComponent implements OnInit {
   programs: Program[];
   provinces: Province[];
   municipalities:Municipality[];
+  districts:any;
+
+
+  provId: number = 1;
+  districtId: number = null;
 
   constructor(
     private router: Router,
     private programService: ProgramService,
     private toastr: ToastrService,
     private provinceService: ProvinceService,
-    private municipalityService:MunicipalityService
+    private municipalityService:MunicipalityService,
+    private districtService:DistrictService
   ) {}
 
   ngOnInit() {
     this.LoadData();
-    this.LoadMunicipality();
+    // this.LoadMunicipality();
   }
   back() {
     this.router.navigate(["/admin-layout/insertdata"]);
@@ -40,10 +48,30 @@ export class InsertdataformComponent implements OnInit {
     this.provinceService.getAllProvinces().subscribe(data => {
       this.provinces = data;
     });
+    this.districtService.getAllDistricts().subscribe(data =>{
+      this.districts =data;
+    })
   }
   LoadMunicipality(){
     this.municipalityService.getAllMunicipalities().subscribe(data => {
       this.municipalities = data;
     });
   }
+  getProvId(){
+    this.districtService.findByProvinceId(this.provId).subscribe(
+      data =>{
+        this.districts = data;
+        console.log(this.districts);
+      }
+    );
+    }
+
+    getDistrictId(){
+      this.municipalityService.findByDistrictId(this.districtId).subscribe(
+        data =>{
+          this.municipalities = data;
+          console.log(this.municipalities);
+        }
+      )
+    }
 }

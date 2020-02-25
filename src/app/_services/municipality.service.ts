@@ -15,6 +15,10 @@ export class MunicipalityService {
 
   //Get all Districts
   getAllMunicipalities(): Observable<Municipality[]> {
-    return this.http.get<Municipality[]>(`${this.baseUrl}/all`);
+    return this.http.get<Municipality[]>(`${this.baseUrl}/districts/all`);
+  }
+
+  findByDistrictId(id: number): Observable<Municipality> {
+    return this.http.get<Municipality>(`${this.baseUrl}/districts/${id}`);
   }
 }
