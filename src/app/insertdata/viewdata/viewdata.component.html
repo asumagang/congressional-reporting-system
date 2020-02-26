@@ -49,6 +49,7 @@
     <div class="form-row mar">
       <div class="form-group col-md-4">
         <select id="inputState" class="form-control form-control-sm">
+            
           <option [ngValue]="program" name="programselect" *ngFor="let program of programs">{{program.name}}</option>
         </select>
       </div>
@@ -84,6 +85,7 @@
       </tr>
     </tbody>
   </table>
+
 </div>
 <hr>
 <div class="totaldiv mb-4">

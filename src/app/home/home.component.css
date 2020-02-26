@@ -11,8 +11,12 @@ img{
 h1{
     color: white;
 }
-
-
+.slide1{
+  padding: 20px 20px;
+}
+.slide1 img {
+  width: 80%;
+}
 
 #tophead {
     max-height: 10px;

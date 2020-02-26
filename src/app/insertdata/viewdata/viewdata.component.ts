@@ -76,11 +76,21 @@ getProvId(){
   }
   
   getDistrictId(){
-    this.municipalityService.findByDistrictId(this.districtId).subscribe(
-      data =>{
-        this.municipalities = data;
-        console.log(this.municipalities);
-      }
-    )
+    console.log(this.districtId);
+    if(this.districtId==17){
+      this.municipalityService.getAllMunicipalities().subscribe(
+        data =>{
+          this.municipalities = data;
+        }
+      );
+    }else{
+      this.municipalityService.findByDistrictId(this.districtId).subscribe(
+        data =>{
+          this.municipalities = data;
+          console.log(this.municipalities);
+        }
+      )
+    }
+   
   }
 }
