@@ -44,7 +44,7 @@ export class UploadComponent implements OnInit {
           this.receivedImageData = res;
           this.base64Data = this.receivedImageData.pic;
           this.convertedImage = "data:image/jpeg;base64," + this.base64Data;
-          this.toastr.success("Image Uploaded successfully");
+          this.toastr.success("File Uploaded successfully");
         },
         err => console.log("Error Occured duringng saving: " + err)
       );

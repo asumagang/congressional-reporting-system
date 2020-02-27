@@ -1,7 +1,11 @@
-<div class="modal-body ">
+<div class="modal-body divbody">
   <div class="row py-4 ">
     <div class="col-lg-6 mx-auto">
       <!-- Upload image input-->
+      <div class="container text-center">
+          
+      <img src="/assets/cloud.png" class="vert-move">
+      </div>
       <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
         <input
           id="upload"
@@ -25,30 +29,19 @@
           >
         </div>
       </div>
-
+      
       <!-- Uploaded image area-->
       <p class="font-italic text-white text-center">
-        The image uploaded will be rendered inside the box below.
+        Browse PDF file to be uploaded to the system.
       </p>
-      <div class="image-area mt-4">
-        <img
-          id="imageResult"
-          [src]="imgURL"
-          height="200"
-          *ngIf="imgURL"
-          class="img-fluid rounded shadow-sm mx-auto d-block"
-        />
+      <div class="container text-center">
+        <button class="btn btn-lg btn-light btn-block text-uppercase"   (click)="onUpload()"
+        value="upload" id="uploadbtn" >
+          Upload
+          </button>
       </div>
+  
     </div>
   </div>
 </div>
-<div class="modal-footer">
-  <button
-    type="button"
-    class="btn btn-primary"
-    (click)="onUpload()"
-    value="upload"
-  >
-    Upload
-  </button>
-</div>
+
