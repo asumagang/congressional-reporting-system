@@ -7,9 +7,10 @@ import { ScannerComponent } from './scanner.component';
 import { FormsModule } from '@angular/forms';
 import { NgbPaginationModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
+import { UploadComponent } from './upload/upload.component';
 
 @NgModule({
-  declarations: [ScannerComponent],
+  declarations: [ScannerComponent, UploadComponent],
   imports: [
     CommonModule,
     ScannerRoutingModule,
@@ -18,6 +19,6 @@ import { RouterModule } from '@angular/router';
     NgbModalModule,
     RouterModule,
   ],
-  entryComponents:[]
+  entryComponents:[UploadComponent]
 })
 export class ScannerModule { }

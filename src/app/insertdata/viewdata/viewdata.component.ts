@@ -8,6 +8,8 @@ import { DistrictService } from 'src/app/_services/district.service';
 import { District } from 'src/app/_models/district';
 import { MunicipalityService } from '../../_services/municipality.service';
 import { Municipality } from '../../_models/municipality';
+import { HttpClient, HttpResponse, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-viewdata',
@@ -20,15 +22,18 @@ districts:any;
 programs:Program[];
 municipalities:Municipality[];
 
+format:String=`405c43ec-6728-48de-be53-2b7d268f5e5e`;
+formatFile:any;
 provId: number = 1;
-districtId:number = null;
+districtId:number = 2;
 
   constructor(
     private router:Router,
     private provinceService:ProvinceService,
     private districtService:DistrictService,
     private programService: ProgramService,
-    private municipalityService:MunicipalityService
+    private municipalityService:MunicipalityService,
+    private httpClient: HttpClient,
   ) { }
 
   ngOnInit() {
@@ -93,4 +98,5 @@ getProvId(){
     }
    
   }
+
 }

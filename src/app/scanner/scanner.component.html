@@ -1,77 +1,30 @@
-<div class="container-flex divbody">
-  <div class="container-flex">
-    <br />
-    <h4 class="ml-4">Scanner</h4>
-    <form class="formdesign mt-3">
-            <div class="form-row">
-              <div class="form-group col-md-3">        
-                <button
-                  type="button"
-                  class="btn btn-dark btn-sm ml-3"
-                  data-toggle="modal"
-                  data-target="#exampleModalCenter"
-                >
-                <i class="fa fa-file-excel-o" aria-hidden="true"></i> Import PDF file
-                </button>
-              </div>
-              <div class="form-group col-md-9">
-                <input
-                  class="form-control form-control-sm"
-                  type="text"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-              </div>
-            </div>
-           
-          </form>
-
-          <div class="container">
-            <div class="row text-center text-lg-left">
-            
-                <div class="col-lg-3 col-md-4 col-6">
-                  <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="assets/rep1.jpg" alt="">
-                      </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                  <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="assets/rep1.jpg" alt="">
-                      </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                  <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="assets/rep1.jpg" alt="">
-                      </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                  <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="assets/rep1.jpg" alt="">
-                      </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                  <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="assets/rep1.jpg" alt="">
-                      </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                  <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="assets/rep1.jpg" alt="">
-                      </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                  <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="assets/rep1.jpg" alt="">
-                      </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                  <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="assets/rep1.jpg" alt="">
-                      </a>
-                </div>
-      
-              </div>
-            
-            </div>
+<div class="container-fluid divbody">
+  <div class="container-fluid">
+    <br>
+    <button class="btn btn-light float-right" (click)="openUploadFrom(null)">Upload File</button>
+    <h4>Reports File Storage</h4>
+    <div class=" searchbar">
+       <input type="text" class="form-control form-control-sm " placeholder="Search Program"  [(ngModel)]="searchText"
+       (ngModelChange)="onSearch()">
+    </div>
+    
   </div>
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

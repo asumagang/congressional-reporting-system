@@ -16,7 +16,7 @@ export class EditProfileComponent implements OnInit {
 
   ngOnInit() {
   }
-  title = 'ImageUploaderFrontEnd';
+  
 
   public selectedFile;
   public event1;
