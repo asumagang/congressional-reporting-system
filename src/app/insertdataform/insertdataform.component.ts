@@ -18,7 +18,7 @@ import { District } from '../_models/district';
 export class InsertdataformComponent implements OnInit {
   programs: Program[];
   provinces: Province[];
-  municipalities:Municipality[];
+  municipalities:any;
   districts:any;
 
 

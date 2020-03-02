@@ -12,6 +12,7 @@
     margin-bottom: 2rem;
     font-weight: 300;
     font-size: 1.5rem;
+    margin-top: -15px;
   }
   
   .card-signin .card-body {
@@ -20,6 +21,7 @@
   
   .form-signin {
     width: 100%;
+    margin-top: -20px;
   }
   
   .form-signin .btn {
@@ -31,7 +33,7 @@
     transition: all 0.2s;
   }
   .logoimg {
-      width: 150px;
+      width: 100px;
       text-align: center;
   }
 #back{

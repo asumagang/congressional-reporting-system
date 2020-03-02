@@ -82,3 +82,7 @@
     left: -78px;
   }
 }
+
+.noborder > tbody >tr > td{
+  border: none;
+}

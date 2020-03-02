@@ -6,7 +6,7 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputState">Report Type</label>
-                  <select id="inputState" class="form-control ">
+                  <select id="inputState" class="form-control form-control-sm">
                     <option>Graphical Report</option>
                     <option>Provincial Report</option>
                     <option>District Report</option>
@@ -14,7 +14,7 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputState">Province</label>
-                  <select id="inputState" class="form-control ">
+                  <select id="inputState" class="form-control form-control-sm">
                       <option [ngValue]="province" *ngFor="let province of provinces">{{province.name}}</option>
                   </select>
                 </div>
@@ -22,20 +22,20 @@
               <div class="form-row">
                 <div class="form-group col-md-4">
                   <label for="inputState">District</label>
-                  <select id="inputState" class="form-control ">
+                  <select id="inputState" class="form-control form-control-sm">
                     <option>1st Congressional Report</option>
                     <option>2st Congressional Report</option>
                   </select>
                 </div>
                 <div class="form-group col-md-4">
                   <label for="inputState">Program</label>
-                  <select id="inputState" class="form-control ">
+                  <select id="inputState" class="form-control form-control-sm">
                       <option [ngValue]="program" *ngFor="let program of programs">{{program.name}}</option>
                   </select>
                 </div>
                 <div class="form-group col-md-4">
                   <label for="inputState">Year</label>
-                  <select id="inputState" class="form-control ">
+                  <select id="inputState" class="form-control form-control-sm">
                     <option>2018</option>
                     <option>2019</option>
                   </select>

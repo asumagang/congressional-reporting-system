@@ -12,6 +12,8 @@ import { Province } from '../_models/province';
 export class DashboardComponent implements OnInit {
   programs:Program[];
   provinces:Province[];
+
+  
   constructor(
     private programService:ProgramService,
     private provinceService:ProvinceService

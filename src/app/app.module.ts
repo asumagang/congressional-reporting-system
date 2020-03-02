@@ -35,6 +35,7 @@ import { InsertdataformComponent } from './insertdataform/insertdataform.compone
     FormsModule,
     HttpClientModule,
     NgbToastModule,
+    
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],

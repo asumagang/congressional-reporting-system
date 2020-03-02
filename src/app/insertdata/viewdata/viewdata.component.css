@@ -30,3 +30,7 @@ tbody tr{
     color: white;
    
 } */
+
+.noborder > tbody >tr > td{
+    border: none;
+  }

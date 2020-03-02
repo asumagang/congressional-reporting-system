@@ -21,4 +21,7 @@ export class MunicipalityService {
   findByDistrictId(id: number): Observable<Municipality> {
     return this.http.get<Municipality>(`${this.baseUrl}/districts/${id}`);
   }
+  getTotalAmountDisbursed(id:number){
+    return this.http.get(`${this.baseUrl}/totalDistrictAmountDisbursed/${id}`);
+  }
 }

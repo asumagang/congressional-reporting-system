@@ -1,35 +1,30 @@
-<div class="container-flex divbody">
-  <div class="row">
-    <div class="col-sm-3 col-md-6 col-lg-4 ">
-      <div class="container-flex left mt-3">
-        <h5><img src="assets/filter.png" alt="" /> Filter</h5>
-        <form>
-          <div class="form-group">
+<div class="container-fluid mt-4 divbody">
+  <h5><img src="assets/filter.png" alt="" /> Filter</h5>
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-4">
             <label for="exampleFormControlSelect1">Program</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <select class="form-control form-control-sm" id="exampleFormControlSelect1">
                     <option [ngValue]="program" *ngFor="let program of programs">{{program.name}}</option>
             </select>
           </div>
-          <div class="form-group">
+          <div class="form-group col-md-4">
             <label for="exampleFormControlSelect1">Province</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <select class="form-control form-control-sm" id="exampleFormControlSelect1">
                     <option [ngValue]="province" *ngFor="let province of provinces">{{province.name}}</option>
             </select>
           </div>
-          <div class="form-group">
+          <div class="form-group col-md-4">
             <label for="exampleFormControlSelect1">Year</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <select class="form-control form-control-sm" id="exampleFormControlSelect1">
               <option>2020</option>
               <option>2019</option>
               <option>2018</option>
               <option>2017</option>
             </select>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
+
+
     </div>
-    <div class="col-sm-9 col-md-6 col-lg-8 ">
-      <div class="container-flex right"></div>
-    </div>
-  </div>
-</div>
