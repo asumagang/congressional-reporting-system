@@ -25,22 +25,22 @@
 
   .bg-dark1 {
 
-background: #1089ff  ;
-
+/* background: #1089ff  ; */
+background-color: #2128B8  ;
 
   }
   .list-group-item{
     /* background-color: #0499F9  ; */
     background-color: transparent  ;
-    border-top-left-radius: 30px;
+    /* border-top-left-radius: 30px; */
     /* color: #E6E6E6 ; */
     color: white ;
     font-size: 14px;
     padding-top: 20px;
   }
-  .list-group{
+  /* .list-group{
     margin-right: -15px;
-  }
+  } */
   .navbar {
     max-height: 40px;
     box-shadow: 0px 10px 10px -15px #111;
@@ -51,18 +51,15 @@ background: #1089ff  ;
     border-left: #59E40F  solid 5px;
   }
   #logoy{
-    background-color: #1089ff ;
+    background-color: #2128B8   ;
   }
 
   .active{
-    background-color: white;
-    color: black;
-    border-left: #59E40F  solid 5px;
+    background-color: #030878 ;
+    color: white;
+    border-radius: 2px;
   }
-  .active img{
-    background-color: #1D8BF9;
-    border: #1D8BF9 solid 2px;
-  }
+
 
   .right{
     background-color: white;
