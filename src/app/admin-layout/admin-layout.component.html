@@ -3,21 +3,22 @@
     <div class="col-sm-3 col-md-6 col-lg-4 col-xl-2 bg-dark1 ">
       <ul class="list-group mt-5 text-left ">
         <li class="list-group-item border-0 logo">
-          <img src="/assets/logo 2.png" />
+          <img src="/assets/logo4.png" />
         </li>
         <li
           class="list-group-item border-0 side"
           [routerLink]="'dashboard'"
           routerLinkActive="active"
         >
-          <img src="/assets/dash.png" alt="" />Dashboard
+          <a *ngIf="isLoggedIn"> <img src="/assets/d1.png" />Dashboard</a>
         </li>
         <li
           class="list-group-item border-0 side"
+          *ngIf="showADMIN"
           [routerLink]="'reports'"
           routerLinkActive="active"
         >
-          <img src="/assets/reportlogo.png" alt="" /> Reports
+          <a *ngIf="isLoggedIn"><img src="/assets/r1.png" /> Reports</a>
         </li>
 
         <li
@@ -25,22 +26,68 @@
           [routerLink]="'insertdata'"
           routerLinkActive="active"
         >
-          <img src="/assets/insertlogo.png" alt="" /> Insert Data
+          <a *ngIf="isLoggedIn">
+            <img src="/assets/in1.png" /> Insert Data</a
+          >
         </li>
         <li
           class="list-group-item border-0 side"
-          routerLink="/manageusers"
+          *ngIf="showADMIN"
+          [routerLink]="'manageusers'"
           routerLinkActive="active"
         >
-          <img src="/assets/muserslogo.png" alt="" />Manage Users
+          <a *ngIf="isLoggedIn"
+            ><img src="/assets/group.png" />Manage Users</a
+          >
         </li>
         <li
           class="list-group-item border-0 side"
-          routerLink="/scanner"
+          [routerLink]="'programs'"
           routerLinkActive="active"
         >
-          <img src="/assets/insertdatalogo.png" alt="" /> Scanner
+          <a *ngIf="isLoggedIn"> <img src="/assets/p1.png" />Programs</a>
         </li>
+        <li
+          class="list-group-item border-0 side"
+          *ngIf="showADMIN"
+          [routerLink]="'scanner'"
+          routerLinkActive="active"
+        >
+          <a><img src="/assets/s1.png" /> Scanner</a>
+        </li>
+        <li
+        class="list-group-item border-0 side"
+        [routerLink]="'activitylog'"
+        routerLinkActive="active"
+      >
+        <a *ngIf="isLoggedIn"> <img src="/assets/book.png" />Activity Log</a>
+      </li>
+      <li class="nav-item avatar dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdownMenuLink-55"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <img
+            src="/assets/pro.jpg"
+              class="rounded-circle z-depth-0 logs"
+            />
+            {{username}}
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-lg-right dropdown-primary"
+            aria-labelledby="navbarDropdownMenuLink-55"
+          >
+            <a class="dropdown-item" [routerLink]="'profile'"
+            routerLinkActive="active">Profile</a>
+            <a class="dropdown-item" routerLink="/passwordsettings" routerLinkActive="active">Password Settings</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" (click)="logout()">Sign out</a>
+          </div>
+        </li>
+        
       </ul>
     </div>
     <div class="col-sm-9 col-md-6 col-lg-8 col-xl-10 ">

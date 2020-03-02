@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { InsertdataComponent } from './insertdata.component';
-import { ListComponent } from './list/list.component';
 
 
 const routes: Routes = [
   {
     path: '', component: InsertdataComponent, children: [
+      { path: 'viewdata', loadChildren: () => import(`./viewdata/viewdata.module`).then(m => m.ViewdataModule) },
+      { path: 'representatives', loadChildren: () => import(`./representatives/representatives.module`).then(m => m.RepresentativesModule)},
       {
-        path: 'list', component: ListComponent
-      },
-      {
-        path: '', redirectTo: 'list', pathMatch: 'full'
+        path: '', redirectTo: 'viewdata', pathMatch: 'full'
       }
     ]
   }

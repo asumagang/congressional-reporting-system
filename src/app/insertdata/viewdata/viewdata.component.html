@@ -1,0 +1,120 @@
+
+
+<div class="container-fluid ">
+  <!-- Large modal -->
+  <form class="formdesign">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+          <input
+          class="form-control form-control-sm"
+          type="text"
+          placeholder="Search"
+          aria-label="Search"
+        />
+         
+      </div>
+      <div class="form-group col-md-6 btnimage">
+          <button class="btn btn-primary btn-sm ml-2 " (click)="openinsertdataform()"><img src="/assets/add.png" alt="" /> Insert Data</button>
+          <button class="btn btn-primary btn-sm ml-2 " (click)="downloadFileSystem()" ><img src="/assets/download.png" alt="" /> Download Format</button>
+          <button class="btn btn-primary btn-sm ml-2 "><img src="/assets/excel.png" alt="" /> Import CSV file</button>
+          <!-- <button
+            type="button"
+            class="btn btn-primary btn-sm btnimage"
+            placement="top"
+            ngbTooltip="Insert Data"
+            (click)="openinsertdataform()"
+          >
+            <img src="/assets/plus.png" alt="" />
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary btn-sm btnimage ml-3"
+            placement="top"
+            ngbTooltip="Download Format"
+          >
+            <img src="/assets/download1.png" alt="" />
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary btn-sm btnimage ml-3"
+            placement="top"
+            ngbTooltip=" Import CSV file"
+          >
+            <img src="/assets/excel.png" alt="" />
+           
+          </button> -->
+      </div>
+    </div>
+    
+    <div class="form-row mar">
+      <div class="form-group col-md-4">
+        <select id="inputState" class="form-control form-control-sm">
+            
+          <option [ngValue]="program" name="programselect" *ngFor="let program of programs">{{program.name}}</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <select  [ngModelOptions]="{standalone: true}" [(ngModel)]="provId" (ngModelChange)="getProvId()" class="form-control form-control-sm">
+          <option [ngValue]="province.id" *ngFor="let province of provinces">{{province.name}}</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <select  [ngModelOptions]="{standalone: true}" [(ngModel)]="districtId" (ngModelChange)="getDistrictId()" class="form-control form-control-sm">
+          <option [ngValue]="district.id" *ngFor="let district of districts">{{district.name}}</option>
+        </select>
+      </div>
+    </div>
+  </form>
+  <table class="table table-hover table-sm mar ">
+    <thead>
+      <tr>
+        <th>Municipality</th>
+        <th>No. of Target Benes</th>
+        <th>No. of Served Benes</th>
+        <th>Amount Allocated</th>
+        <th>Amount Disbursed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let municipality of municipalities">
+        <td>{{municipality.name}}</td>
+        <td>{{municipality.targetbenes}}</td>
+        <td>{{municipality.servedbenes}}</td>
+        <td>{{municipality.amountallocated}}</td>
+        <td>{{municipality.amountdisbursed}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+<hr>
+<div class="totaldiv mb-4">
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <label class=" col-form-label-sm"
+          >Provincial Total No. of Beneficiaries</label
+        >
+        <input class="form-control form-control-sm mar" />
+      </div>
+      <div class="form-group col-md-3">
+        <label class=" col-form-label-sm"
+          >Provincial Total Amount Disbursed</label
+        >
+        <input class="form-control form-control-sm mar" />
+      </div>
+      <div class="form-group col-md-3">
+        <label class=" col-form-label-sm"
+          >District Total No. of Beneficiaries</label
+        >
+        <input class="form-control form-control-sm mar" />
+      </div>
+      <div class="form-group col-md-3">
+        <label class=" col-form-label-sm"
+          >District Total Amount Disbursed</label
+        >
+        <input class="form-control form-control-sm mar" />
+      </div>
+    </div>
+  </form>
+</div>

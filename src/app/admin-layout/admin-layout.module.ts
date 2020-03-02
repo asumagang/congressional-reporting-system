@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import {NgbModule, NgbToastModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { ReportsComponent } from '../reports/reports.component';
@@ -11,7 +15,11 @@ import { AdminLayoutComponent } from './admin-layout.component';
   declarations: [DashboardComponent,ReportsComponent,AdminLayoutComponent],
   imports: [
     CommonModule,
-    AdminLayoutRoutingModule
+    AdminLayoutRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    NgbModule,
+    NgbToastModule
   ]
 })
 export class AdminLayoutModule { }

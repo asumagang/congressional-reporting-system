@@ -1,0 +1,34 @@
+<div class="container-fluid divbody">
+  <div class="container-fluid">
+    <br>
+    <button class="btn btn-light float-right" (click)="openUploadFrom(null)">Upload File</button>
+    <h4>Reports File Storage</h4>
+    <div class=" searchbar">
+       <input type="text" class="form-control form-control-sm " placeholder="Search Report File"  [(ngModel)]="searchText"
+       (ngModelChange)="onSearch()">
+    </div>
+    <br>
+    Reports
+    <li *ngFor="let pdf of pdfReports">
+      <span class="badge">{{pdf.id}}</span> {{hero.pdf.name}}
+    </li>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

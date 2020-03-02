@@ -1,0 +1,57 @@
+<div class="mt-1">
+    <div class="container-fluid">
+        <button class="btn btn-light float-right mb-2" (click)="openUserForm(null)">Add User</button>
+        <div class=" searchbar">
+           <input type="text" class="form-control form-control-sm " placeholder="Search User"  [(ngModel)]="searchText"
+           (ngModelChange)="onSearch()">
+        </div>
+        <table class="table table-hover mt-2 table-sm">
+           <thead>
+             <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Mobile no.</th>
+                <th>Username</th>
+               <th></th>
+             </tr>
+           </thead>
+           <tbody class="tabody">
+             <tr *ngFor="let user of usersData">
+               <td><img style="width: 20px;" src="/assets/user.png" class="mr-2" > {{user.firstname}} {{user.lastname}}</td>
+               <td>{{user.email}}</td>
+               <td>{{user.address}}</td>
+               <td>{{user.mobileno}}</td>
+               <td>{{user.username}}</td>
+               <td><button class="btn btn-primary btn-sm " (click)="openUserForm(user)">Edit</button>
+                 <button class="btn btn-danger btn-sm ml-1" (click)="onDelete(user)">Delete</button>
+               </td>
+             </tr>
+           </tbody>
+         </table>
+      </div>
+      <div class="t-footer container d-flex justify-content-between pt-2">
+         <div class="row">
+           <div class="col">
+             <ngb-pagination
+               [collectionSize]="collectionSize"
+               [pageSize]="pageSize"
+               [(page)]="page"
+               (pageChange)="onPageChange()"
+               size="sm"
+             ></ngb-pagination>
+           </div>
+           <div *ngIf="searchText" class="col p-0">
+             <p class="result-text">
+               {{
+                 resultLength > 1
+                   ? resultLength + " results"
+                   : resultLength === 1
+                   ? "1 result"
+                   : "No result"
+               }}
+             </p>
+           </div>
+         </div>
+         <div>
+</div>
