@@ -23,8 +23,8 @@
                <td>{{user.address}}</td>
                <td>{{user.mobileno}}</td>
                <td>{{user.username}}</td>
-               <td><button class="btn btn-primary btn-sm " (click)="openUserForm(user)">Edit</button>
-                 <button class="btn btn-danger btn-sm ml-1" (click)="onDelete(user)">Delete</button>
+               <td><button class="btn btn-sm " (click)="openUserForm(user)"  ngbTooltip="Edit User"><img src="/assets/edit.png" style="width: 15px" /></button>
+                 <button class="btn btn-sm ml-1" (click)="onDelete(user)" ngbTooltip="Delete User"><img src="/assets/bin.png" style="width: 15px" /></button>
                </td>
              </tr>
            </tbody>

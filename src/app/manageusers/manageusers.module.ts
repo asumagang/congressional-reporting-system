@@ -15,7 +15,6 @@ import { ManageusersComponent } from './manageusers.component';
     ManageusersRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgbModule,
     NgbToastModule
   ]
 })

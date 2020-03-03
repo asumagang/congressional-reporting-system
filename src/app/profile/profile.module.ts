@@ -9,9 +9,12 @@ import { FormsModule } from '@angular/forms';
 import { NgbPaginationModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { MyprofileComponent } from './myprofile/myprofile.component';
+import { MyreportsComponent } from './myreports/myreports.component';
+import { PasswordsettingsComponent } from './passwordsettings/passwordsettings.component';
 
 @NgModule({
-  declarations: [ProfileComponent, EditProfileComponent],
+  declarations: [ProfileComponent, EditProfileComponent, MyprofileComponent, MyreportsComponent, PasswordsettingsComponent],
   imports: [
     CommonModule,
     ProfileRoutingModule,
@@ -20,6 +23,6 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     NgbModalModule,
     RouterModule,
   ],
-  entryComponents:[EditProfileComponent]
+
 })
 export class ProfileModule { }

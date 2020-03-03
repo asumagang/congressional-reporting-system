@@ -26,7 +26,7 @@
   .bg-dark1 {
 
 /* background: #1089ff  ; */
-background-color: #2128B8  ;
+background-color: #0747A6 ;
 
   }
   .list-group-item{
@@ -51,11 +51,12 @@ background-color: #2128B8  ;
     border-left: #59E40F  solid 5px;
   }
   #logoy{
-    background-color: #2128B8   ;
+    background-color: #0747A6   ;
+    text-align: center;
   }
 
   .active{
-    background-color: #030878 ;
+    background-color: #05367F ;
     color: white;
     border-radius: 2px;
   }
@@ -74,7 +75,8 @@ i{
     margin-right: 10px;
 }
 .logo img{
-    width: 100px;
+    width: 50px;
+    border-radius: 5px;
 }
 .avatar img{
   width: 30px;

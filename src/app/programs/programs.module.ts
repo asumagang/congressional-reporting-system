@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ProgramsRoutingModule } from './programs-routing.module';
 import { ProgramsComponent } from './programs.component';
 import { FormsModule } from '@angular/forms';
-import { NgbPaginationModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbPaginationModule, NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddProgramComponent } from '../add-program/add-program.component';
 import { RouterModule } from '@angular/router';
 import { ProgramDeleteComponent } from '../program-delete/program-delete.component';
@@ -20,6 +20,7 @@ import { ProgramDeleteComponent } from '../program-delete/program-delete.compone
     NgbPaginationModule,
     NgbModalModule,
     RouterModule,
+    NgbModule,
 
   ],
   entryComponents:[AddProgramComponent, ProgramDeleteComponent]

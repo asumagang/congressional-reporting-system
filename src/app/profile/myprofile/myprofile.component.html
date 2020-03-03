@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-9">
+      <!-- User profile -->
+      <div class="panel panel-default">
+        <div class="panel-heading"></div>
+        <div class="panel-body">
+          <div class="profile__avatar">
+            <img src="/assets/zayvain.jpeg" alt="..." />
+          </div>
+          <div class="profile__header"></div>
+        </div>
+      </div>
+
+      <!-- User info -->
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <table class="table profile__table">
+            <tbody>
+              <tr>
+                <th><strong>Name</strong></th>
+                <td>{{ currentUser.firstname }} {{ currentUser.lastname }}</td>
+              </tr>
+              <tr>
+                <th><strong>Username</strong></th>
+                <td>{{ currentUser.username }}</td>
+              </tr>
+              <tr>
+                <th><strong>Role</strong></th>
+                <td>
+                  <ul class="ml-5">
+                    <li *ngFor="let role of currentUser.roles">
+                      {{ role }}
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><strong>Email</strong></th>
+                <td>
+                  {{ currentUser.email }}
+                </td>
+              </tr>
+              <tr>
+                    <th><strong>Mobile Number</strong></th>
+                    <td>
+                            {{ currentUser.mobileno }}
+                    </td>
+                  </tr>
+                  <tr>
+                        <th><strong>Address</strong></th>
+                        <td>
+                                {{ currentUser.address }}
+                        </td>
+                      </tr>
+            </tbody>
+          </table>
+          <button class="btn btn-primary btn-sm float-right">Edit Profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

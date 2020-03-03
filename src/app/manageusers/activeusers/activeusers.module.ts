@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { NgbPaginationModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbPaginationModule, NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ActiveusersRoutingModule } from './activeusers-routing.module';
 import { ActiveusersComponent } from './activeusers.component';
 
@@ -20,6 +20,7 @@ import { DeleteuserComponent } from './deleteuser/deleteuser.component';
     NgbPaginationModule,
     NgbModalModule,
     RouterModule,
+    NgbModule,
   ],
   entryComponents:[EdituserComponent]
 

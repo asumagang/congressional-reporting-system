@@ -86,3 +86,9 @@
 .noborder > tbody >tr > td{
   border: none;
 }
+.table button{
+  background-color: #007BFE;
+}
+.table button:hover{
+  background-color: #0499f9;
+}
