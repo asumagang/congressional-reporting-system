@@ -21,6 +21,7 @@ export class ViewdataComponent implements OnInit {
   districts: any;
   programs: Program[];
   municipalities: any;
+  amountdisbursed:any;
   totalamtdisbursed: number;
 
   format: String = `405c43ec-6728-48de-be53-2b7d268f5e5e`;
@@ -87,6 +88,11 @@ export class ViewdataComponent implements OnInit {
           this.municipalities = data;
           console.log(this.municipalities);
         });
+      this.municipalityService.getTotalAmountDisbursed(this.districtId)
+      .subscribe(data =>{
+        this.totalamtdisbursed =data;
+        console.log(this.totalamtdisbursed)
+      })
     }
   }
 }
