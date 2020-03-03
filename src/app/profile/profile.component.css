@@ -84,13 +84,20 @@
   .divbody{
     padding: 20px 20px;
   }
-  .left{
+  /* .left{
     border-right: solid grey .5px;
  
-  }
+  } */
   .left p{
       font-size: 14px;
   }
   .active{
     background-color: #EBECF0;
+  }
+  p:hover{
+    background-color: #EBECF0;
+  }
+  .sideimage{
+    width: 15px;
+    margin-right: 5px;
   }

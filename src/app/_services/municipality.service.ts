@@ -24,4 +24,7 @@ export class MunicipalityService {
   getTotalAmountDisbursed(id:number){
     return this.http.get<number>(`${this.baseUrl}/totalDistrictAmountDisbursed/${id}`);
   }
+  getTotalServedBenes(id:number){
+    return this.http.get<number>(`${this.baseUrl}/totalDistrictServedBenes/${id}`);
+  }
 }
