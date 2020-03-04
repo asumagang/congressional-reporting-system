@@ -23,7 +23,9 @@
     width: 100%;
     margin-top: -20px;
   }
-  
+  .form-signin input{
+    background-color: #E8F0FE;
+  }
   .form-signin .btn {
     font-size: 80%;
     border-radius: 5rem;
