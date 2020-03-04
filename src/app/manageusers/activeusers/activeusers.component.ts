@@ -15,6 +15,10 @@ import { DeleteuserComponent } from './deleteuser/deleteuser.component';
 export class ActiveusersComponent implements OnInit {
   usersData: User[];
   searchText: string;
+
+    //initializing p to one
+    p: number = 1;
+    
   constructor(
     private userService: UserService,
     private toastr: ToastrService,

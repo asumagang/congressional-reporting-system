@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 
 import { ViewdataRoutingModule } from './viewdata-routing.module';
 import { ViewdataComponent } from './viewdata.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { ViewdataComponent } from './viewdata.component';
     NgbPaginationModule,
     NgbModalModule,
     RouterModule,
-    NgbModule
+    NgbModule,
+    NgxPaginationModule,
+    Ng2SearchPipeModule,
   ],
   entryComponents:[]
 })

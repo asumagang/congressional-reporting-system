@@ -8,6 +8,7 @@
           <input
           class="form-control form-control-sm"
           type="text"
+          name="search" [(ngModel)]="filter"
           placeholder="Search"
           aria-label="Search"
         />
@@ -17,32 +18,6 @@
           <button class="btn btn-primary btn-sm ml-2 " (click)="openinsertdataform()"><img src="/assets/add.png" alt="" /> Insert Data</button>
           <button class="btn btn-primary btn-sm ml-2 " (click)="downloadFileSystem()" ><img src="/assets/download.png" alt="" /> Download Format</button>
           <button class="btn btn-primary btn-sm ml-2 "><img src="/assets/excel.png" alt="" /> Import CSV file</button>
-          <!-- <button
-            type="button"
-            class="btn btn-primary btn-sm btnimage"
-            placement="top"
-            ngbTooltip="Insert Data"
-            (click)="openinsertdataform()"
-          >
-            <img src="/assets/plus.png" alt="" />
-          </button>
-          <button
-            type="button"
-            class="btn btn-primary btn-sm btnimage ml-3"
-            placement="top"
-            ngbTooltip="Download Format"
-          >
-            <img src="/assets/download1.png" alt="" />
-          </button>
-          <button
-            type="button"
-            class="btn btn-primary btn-sm btnimage ml-3"
-            placement="top"
-            ngbTooltip=" Import CSV file"
-          >
-            <img src="/assets/excel.png" alt="" />
-           
-          </button> -->
       </div>
     </div>
     
@@ -76,7 +51,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let municipality of municipalities">
+      <tr *ngFor="let municipality of municipalities | filter:filter | paginate: { itemsPerPage: 5, currentPage: p }">
         <td>{{municipality.name}}</td>
         <td>{{municipality.targetbenes}}</td>
         <td>{{municipality.servedbenes}}</td>
@@ -84,10 +59,12 @@
         <td>{{municipality.amountdisbursed}}</td>
       </tr>
     </tbody>
+  
   </table>
-
+  <div class="pagination">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
 </div>
-<hr>
 <div class="totaldiv mb-4">
   <form>
     <div class="form-row">
@@ -113,7 +90,7 @@
         <label class=" col-form-label-sm"
           >District Total Amount Disbursed</label
         >
-        <input class="form-control form-control-sm mar" value="{{totalamtdisbursed}}"/>
+        <input class="form-control form-control-sm mar" value="{{totalamtdisbursed}}" />
       </div>
     </div>
   </form>

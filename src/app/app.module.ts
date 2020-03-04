@@ -6,6 +6,8 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter'; 
 
 import { AuthGuard } from "./_helpers/auth.guard";
 import { authInterceptorProviders } from "./_helpers/auth.interceptor";
@@ -35,6 +37,8 @@ import { InsertdataformComponent } from './insertdataform/insertdataform.compone
     FormsModule,
     HttpClientModule,
     NgbToastModule,
+    NgxPaginationModule,
+    Ng2SearchPipeModule,
     
     BrowserAnimationsModule,
     ToastrModule.forRoot()

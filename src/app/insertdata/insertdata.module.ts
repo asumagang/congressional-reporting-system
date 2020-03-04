@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {NgbModule, NgbToastModule} from '@ng-bootstrap/ng-bootstrap';
 import { InsertdataRoutingModule } from './insertdata-routing.module';
 import { InsertdataComponent } from './insertdata.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { InsertdataComponent } from './insertdata.component';
     FormsModule,
     HttpClientModule,
     NgbModule,
-    NgbToastModule
+    NgbToastModule,
+    NgxPaginationModule,
   ]
 })
 export class InsertdataModule { }

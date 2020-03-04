@@ -6,6 +6,7 @@ import {NgbModule, NgbToastModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { ManageusersRoutingModule } from './manageusers-routing.module';
 import { ManageusersComponent } from './manageusers.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ManageusersComponent } from './manageusers.component';
     ManageusersRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgbToastModule
+    NgbToastModule,
+    NgxPaginationModule,
   ]
 })
 export class ManageusersModule { }

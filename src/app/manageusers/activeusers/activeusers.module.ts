@@ -8,6 +8,7 @@ import { ActiveusersComponent } from './activeusers.component';
 import { RouterModule } from '@angular/router';
 import { EdituserComponent } from './edituser/edituser.component';
 import { DeleteuserComponent } from './deleteuser/deleteuser.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -21,6 +22,7 @@ import { DeleteuserComponent } from './deleteuser/deleteuser.component';
     NgbModalModule,
     RouterModule,
     NgbModule,
+    NgxPaginationModule
   ],
   entryComponents:[EdituserComponent]
 

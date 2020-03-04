@@ -29,6 +29,9 @@ export class ViewdataComponent implements OnInit {
   provId: number = 1;
   districtId: number = 2;
 
+  //initializing p to one
+  p: number = 1;
+  
   constructor(
     private router: Router,
     private provinceService: ProvinceService,
@@ -41,6 +44,7 @@ export class ViewdataComponent implements OnInit {
   ngOnInit() {
     this.LoadProvinces();
     this.LoadPrograms();
+    this.LoadAllMunicipalities();
   }
 
   selectOption(id: number) {
@@ -74,7 +78,11 @@ export class ViewdataComponent implements OnInit {
   openinsertdataform() {
     this.router.navigate(["/insertdataform"]);
   }
-
+  LoadAllMunicipalities(){
+    this.municipalityService.getAllMunicipalities().subscribe(data => {
+      this.municipalities = data;
+    });
+  }
   getDistrictId() {
     console.log(this.districtId);
     if (this.districtId == 17) {

@@ -34,3 +34,7 @@ tbody tr{
 .noborder > tbody >tr > td{
     border: none;
   }
+  /* .pagination{
+    background-color: #DEDEDE;
+    height: 15px;
+  } */
