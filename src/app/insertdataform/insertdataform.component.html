@@ -1,0 +1,217 @@
+<div class="container-flex divbody">
+  <img src="/assets/back.png" id="back" (click)="back()" />
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7 col-md-7 col-lg-7 mx-auto">
+        <div class="card card-signin">
+          <div class="card-body ">
+            <!--            
+            <div class="text-center mb-4">
+
+            </div> -->
+
+            <h5 class="card-title">Insert Data</h5>
+            <hr />
+            <form>
+              <div class="form-group row">
+                <label
+                  for="colFormLabelSm"
+                  class="col-sm-3 col-form-label col-form-label-sm"
+                  >Program</label
+                >
+                <div class="col-sm-9">
+                  <select
+                    id="inputState"
+                    class="form-control form-control-sm mar"
+                    
+                  >
+                    <option [ngValue]="program" *ngFor="let program of programs">{{program.name}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label
+                  for="colFormLabelSm"
+                  class="col-sm-3 col-form-label col-form-label-sm"
+                  >Province</label
+                >
+                <div class="col-sm-9">
+                  <select
+                  [ngModelOptions]="{standalone: true}" [(ngModel)]="provId" (ngModelChange)="getProvId()"
+                    class="form-control form-control-sm mar"
+                  >
+                    <option [ngValue]="province.id" *ngFor="let province of provinces">{{province.name}}</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label
+                  for="colFormLabelSm"
+                  class="col-sm-3 col-form-label col-form-label-sm"
+                  >District</label
+                >
+                <div class="col-sm-9">
+                  <select
+                  [ngModelOptions]="{standalone: true}" [(ngModel)]="districtId" (ngModelChange)="getDistrictId()"
+                    class="form-control form-control-sm mar"
+                  >
+                    <option [ngValue]="district.id" *ngFor="let district of districts">{{district.name}}</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label
+                  for="colFormLabelSm"
+                  class="col-sm-3 col-form-label col-form-label-sm"
+                  >Municipality</label
+                >
+                <div class="col-sm-9">
+                  <select
+                    id="inputState"
+                    class="form-control form-control-sm mar"
+                  >
+                    <option [ngValue]="municipality.id" *ngFor="let municipality of municipalities">{{municipality.name}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label
+                  for="colFormLabelSm"
+                  class="col-sm-4 col-form-label col-form-label-sm"
+                  >Number of Beneficiaries</label
+                >
+                <div class="col-sm-8">
+                  <input class="form-control form-control-sm mar" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label
+                  for="colFormLabelSm"
+                  class="col-sm-4 col-form-label col-form-label-sm"
+                  >Amount Disbursed</label
+                >
+                <div class="col-sm-8">
+                  <input class="form-control form-control-sm mar" />
+                </div>
+              </div>
+              <br />
+              <hr />
+              <p
+                data-toggle="collapse"
+                class="text-primary drop"
+                href="#collapseExample"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
+                Case AICS <img src="/assets/download.png" alt="" />
+              </p>
+              <div class="collapse" id="collapseExample">
+                <div>
+                  <div class="form-row mar">
+                    <div class="form-group col-md-6 mar">
+                      <label class="label-sm">Types of Assistance</label>
+                      <select class="form-control form-control-sm mar" disabled>
+                        <option>Food</option>
+                        <option>Clothing</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row mar">
+                    <div class="form-group col-md-6 mar">
+                      <label class="label-sm">Number of Beneficiaries</label>
+                      <input
+                        class="form-control form-control-sm mar"
+                        disabled
+                      />
+                    </div>
+                    <div class="form-group col-md-3 mar">
+                      <label class="label-sm">Walked-in</label>
+                      <input
+                        class="form-control form-control-sm mar"
+                        disabled
+                      />
+                    </div>
+                    <div class="form-group col-md-3 mar">
+                      <label class="label-sm">Amount</label>
+                      <input
+                        class="form-control form-control-sm mar"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                  <div class="form-row mar">
+                    <div class="form-group col-md-6 mar"></div>
+                    <div class="form-group col-md-3 mar">
+                      <label class="label-sm">Referral</label>
+                      <input
+                        class="form-control form-control-sm mar"
+                        disabled
+                      />
+                    </div>
+                    <div class="form-group col-md-3 mar">
+                      <label class="label-sm">Amount</label>
+                      <input
+                        class="form-control form-control-sm mar"
+                        disabled
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-row mar">
+                    <div class="form-group col-md-6 mar">
+                      <label class="label-sm">Amount Disbursed</label>
+                      <input
+                        class="form-control form-control-sm mar"
+                        disabled
+                      />
+                    </div>
+                    <div class="form-group col-md-3 mar">
+                      <label class="label-sm">Walked-in</label>
+                      <input
+                        class="form-control form-control-sm mar"
+                        disabled
+                      />
+                    </div>
+                    <div class="form-group col-md-3 mar">
+                      <label class="label-sm">Amount</label>
+                      <input
+                        class="form-control form-control-sm mar"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                  <div class="form-row mar">
+                    <div class="form-group col-md-6 mar"></div>
+                    <div class="form-group col-md-3 mar">
+                      <label class="label-sm">Referral</label>
+                      <input
+                        class="form-control form-control-sm mar"
+                        disabled
+                      />
+                    </div>
+                    <div class="form-group col-md-3 mar">
+                      <label class="label-sm">Amount</label>
+                      <input
+                        class="form-control form-control-sm mar"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group ">
+                <button type="submit" class="btn btn-primary ml-2 float-right">
+                  Insert
+                </button>
+                <button class="btn btn-dark  float-right">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

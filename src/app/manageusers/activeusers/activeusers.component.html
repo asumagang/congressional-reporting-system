@@ -1,0 +1,36 @@
+<div class="mt-1">
+    <div class="container-fluid">
+        <button class="btn btn-light float-right mb-2" (click)="openUserForm(null)">Add User</button>
+        <div class=" searchbar">
+           <input type="text" class="form-control form-control-sm " placeholder="Search User"  [(ngModel)]="searchText"
+           (ngModelChange)="onSearch()">
+        </div>
+        <table class="table table-hover mt-2 table-sm noborder">
+           <thead>
+             <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Mobile no.</th>
+                <th>Username</th>
+               <th></th>
+             </tr>
+           </thead>
+           <tbody class="tabody">
+             <tr *ngFor="let user of usersData | paginate: { itemsPerPage: 5, currentPage: p }">
+               <td><img style="width: 20px;" src="/assets/user.png" class="mr-2" > {{user.firstname}} {{user.lastname}}</td>
+               <td>{{user.email}}</td>
+               <td>{{user.address}}</td>
+               <td>{{user.mobileno}}</td>
+               <td>{{user.username}}</td>
+               <td><button class="btn btn-sm " (click)="openUserForm(user)"  ngbTooltip="Edit User"><img src="/assets/edit.png" style="width: 15px" /></button>
+                 <button class="btn btn-sm ml-1" (click)="onDelete(user)" ngbTooltip="Delete User"><img src="/assets/bin.png" style="width: 15px" /></button>
+               </td>
+             </tr>
+           </tbody>
+         </table>
+         <div class="pagination">
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+</div>

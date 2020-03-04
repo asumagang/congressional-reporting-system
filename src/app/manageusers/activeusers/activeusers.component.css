@@ -1,0 +1,50 @@
+
+  .mar{
+    margin-top: -8px;
+  }
+  .label-sm{
+    font-size: 12px;
+  }
+  .formdesign{
+  
+    padding: 5px 5px;
+    border-radius: 5px;
+  }
+
+  .titlenav{
+    margin-top: -25px;
+    border-bottom: solid #E1E1E1  1px;
+  }
+  .navbar-brand{
+    color: black;
+  }
+  .navbar-brand:hover{
+    color: black;
+  }
+
+.babaw {
+  background-color: #0499f9;
+  height: 80px;
+}
+.searchbar input{
+  width: 50%;
+}
+
+
+.tabody tr{
+  font-size: 15px;
+  height: 15px;
+}
+.light-blue-backdrop {
+  background-color: black;
+  opacity: 1;
+}
+.noborder > tbody >tr > td{
+  border: none;
+}
+.table button{
+  background-color: #007BFE;
+}
+.table button:hover{
+  background-color: #0499f9;
+}

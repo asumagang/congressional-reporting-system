@@ -1,0 +1,85 @@
+<div class="container-fluid divbody">
+  <div class="row">
+    <div class="col-sm-3 col-md-6 col-lg-4 col-xl-2 left">
+      <h5 class="mb-2">My Profile</h5>
+      <p [routerLink]="'myprofile'"
+      routerLinkActive="active"><img src="/assets/userimg.png" class="sideimage"/>Profile Details</p>
+      <p [routerLink]="'myreports'"
+      routerLinkActive="active"><img src="/assets/news.png" class="sideimage"/>Reports</p>
+      <hr>
+      <h5 class="mb-2">Security</h5>
+      <p [routerLink]="'passwordsettings'"
+      routerLinkActive="active"><img src="/assets/lock.png" class="sideimage"/>Password</p>
+      <p><img src="/assets/logout.png" class="sideimage"/>Sign out</p>
+    </div>
+    <div class="col-sm-9 col-md-6 col-lg-8 col-xl-10 ">
+      <div class="container mt-3">
+          <router-outlet></router-outlet>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-md-6 col-lg-4 ">
+      <div class="card mt-5" style="width: 18rem;">
+        <img class="card-img-top" src="/assets/zayvain.jpeg" alt="Card image cap">
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ currentUser.firstname }} {{ currentUser.lastname }}</h5>
+          <p>
+            {{ currentUser.username }}
+          </p>
+        </div>
+        <ul class="ml-5">
+          <li *ngFor="let role of currentUser.roles">
+            {{ role }}
+          </li>
+        </ul>
+        <div class="card-body text-center">
+          <button
+            class="btn btn-primary btn-sm  mb-2"
+            (click)="openEditProfile(null)"
+          >
+            Upload Image
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-9 col-md-6 col-lg-8 ">
+      <div class="card mt-5">
+        <div class="card-body">
+          <h5 class="card-title">Profile</h5>
+          <p>
+            <strong>Token:</strong>
+            {{ currentUser.accessToken.substring(0, 20) }} ...
+            {{
+              currentUser.accessToken.substr(
+                currentUser.accessToken.length - 20
+              )
+            }}
+          </p>
+<p>
+<strong>Email:</strong>
+{{ currentUser.email }}
+</p>
+<p>
+<strong>Username:</strong>
+{{ currentUser.username }}
+</p>
+<p>
+<strong>Mobile Number:</strong>
+{{ currentUser.mobileno }}
+</p>
+<p>
+<strong>Address:</strong>
+{{ currentUser.address }}
+</p>
+        </div>
+        <ng-template #loggedOut>
+          Please login.
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div> -->

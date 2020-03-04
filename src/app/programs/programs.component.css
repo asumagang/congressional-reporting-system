@@ -1,0 +1,94 @@
+
+  .mar{
+    margin-top: -8px;
+  }
+  .label-sm{
+    font-size: 12px;
+  }
+  .formdesign{
+  
+    padding: 5px 5px;
+    border-radius: 5px;
+  }
+
+  .titlenav{
+    margin-top: -25px;
+    border-bottom: solid #E1E1E1  1px;
+  }
+  .navbar-brand{
+    color: black;
+  }
+  .navbar-brand:hover{
+    color: black;
+  }
+
+.babaw {
+  background-color: #0499f9;
+  height: 80px;
+}
+.searchbar input{
+  width: 50%;
+}
+
+/* .divbody{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  min-height: 600px;
+  margin-top: -35px;
+  background-color: white;
+} */
+.tabody tr{
+  font-size: 15px;
+  height: 15px;
+}
+.light-blue-backdrop {
+  background-color: black;
+  opacity: 1;
+}
+.divbody{
+  position: relative;
+  animation: animatop 0.9s cubic-bezier(0.425, 1.14, 0.47, 1.125) forwards;
+}
+@keyframes animatop {
+  0% {
+    opacity: 0;
+    bottom: -500px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+@keyframes animainfos {
+  0% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: -42px;
+  }
+}
+@keyframes rotatemagic {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+    top: -24px;
+    left: -253px;
+  }
+  100% {
+    transform: rotate(-30deg);
+    top: -24px;
+    left: -78px;
+  }
+}
+
+.noborder > tbody >tr > td{
+  border: none;
+}
+.table button{
+  background-color: #007BFE;
+}
+.table button:hover{
+  background-color: #0499f9;
+}
