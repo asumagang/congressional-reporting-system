@@ -1,0 +1,71 @@
+<div class="container-flex" id="tophead" >
+    <p>Congressional Report System V1.1</p>
+  </div>
+
+
+    <nav class="navbar sticky-top navbar-expand-lg  static-top" *ngIf="!isLoggedIn">
+
+          <a class="navbar-brand " >
+            <img src="/assets/logo 2.png" routerLink="home" class="logs" />
+          </a>
+      
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+          <i class="fa fa-bars" aria-hidden="true"></i>
+
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto " *ngIf="!isLoggedIn">
+                    <li class="nav-item">
+                      <a href="/signup" class="nav-link" routerLink="signup">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="/login" class="nav-link" routerLink="login">Login</a>
+                    </li>
+                  </ul>
+            <ul class="navbar-nav ml-auto " *ngIf="isLoggedIn">
+              <li class="nav-item avatar noti">
+                <a class="nav-link ">
+                  <img
+                    src="/assets/bell.png"
+                    class="rounded-circle z-depth-0"
+                    alt="avatar image"
+                  />
+                </a>
+              </li>
+              <li class="nav-item avatar dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  id="navbarDropdownMenuLink-55"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <img
+                  src="/assets/pro.jpg"
+                    class="rounded-circle z-depth-0 logs"
+                  />
+                  {{username}}
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-lg-right dropdown-primary"
+                  aria-labelledby="navbarDropdownMenuLink-55"
+                >
+                  <a class="dropdown-item" routerLink="/profile" routerLinkActive="active">Profile</a>
+                  <a class="dropdown-item" routerLink="/passwordsettings" routerLinkActive="active">Password Settings</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" (click)="logout()">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </nav>
+      
+

@@ -1,0 +1,14 @@
+.divbody {
+    padding: 20px 10x;
+}
+.left{
+    box-shadow: 0 0.5rem .5rem 0 rgba(2, 106, 175, 0.2);
+    height: 500px;
+    padding: 10px 10px;
+}
+.divbody img{
+    width: 20px;
+}
+.right{
+    padding: 10px 10px;
+}
