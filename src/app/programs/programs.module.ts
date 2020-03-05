@@ -8,6 +8,8 @@ import { NgbPaginationModule, NgbModalModule, NgbModule } from '@ng-bootstrap/ng
 import { AddProgramComponent } from '../add-program/add-program.component';
 import { RouterModule } from '@angular/router';
 import { ProgramDeleteComponent } from '../program-delete/program-delete.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 
@@ -21,6 +23,8 @@ import { ProgramDeleteComponent } from '../program-delete/program-delete.compone
     NgbModalModule,
     RouterModule,
     NgbModule,
+    NgxPaginationModule,
+    Ng2SearchPipeModule,
 
   ],
   entryComponents:[AddProgramComponent, ProgramDeleteComponent]

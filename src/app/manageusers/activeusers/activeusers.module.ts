@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { EdituserComponent } from './edituser/edituser.component';
 import { DeleteuserComponent } from './deleteuser/deleteuser.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 
@@ -22,7 +23,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     NgbModalModule,
     RouterModule,
     NgbModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    Ng2SearchPipeModule,
   ],
   entryComponents:[EdituserComponent]
 

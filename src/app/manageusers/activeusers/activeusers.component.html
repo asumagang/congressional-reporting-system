@@ -2,8 +2,7 @@
     <div class="container-fluid">
         <button class="btn btn-light float-right mb-2" (click)="openUserForm(null)">Add User</button>
         <div class=" searchbar">
-           <input type="text" class="form-control form-control-sm " placeholder="Search User"  [(ngModel)]="searchText"
-           (ngModelChange)="onSearch()">
+           <input type="text" class="form-control form-control-sm " placeholder="Search User"   name="search" [(ngModel)]="filter">
         </div>
         <table class="table table-hover mt-2 table-sm noborder">
            <thead>
@@ -17,7 +16,7 @@
              </tr>
            </thead>
            <tbody class="tabody">
-             <tr *ngFor="let user of usersData | paginate: { itemsPerPage: 5, currentPage: p }">
+             <tr *ngFor="let user of usersData | filter:filter | paginate: { itemsPerPage: 5, currentPage: p }">
                <td><img style="width: 20px;" src="/assets/user.png" class="mr-2" > {{user.firstname}} {{user.lastname}}</td>
                <td>{{user.email}}</td>
                <td>{{user.address}}</td>

@@ -17,13 +17,8 @@ import { ProgramDeleteComponent } from '../program-delete/program-delete.compone
 export class ProgramsComponent implements OnInit {
 
   programsData: Program[];
-  searchText: string;
-  collectionSize: number;
-  page: number;
-  resultLength: number;
-  pageSize = 5;
-  errorMsg: string;
-
+    //initializing p to one
+    p: number = 1;
   constructor(
     private programService: ProgramService,
     private activatedRoute: ActivatedRoute,
@@ -33,58 +28,18 @@ export class ProgramsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.activatedRoute.queryParams.subscribe((params: Params) => {
-      const pageQ = params["page"];
-      const searchQ = params["search"];
-      this.page = pageQ ? parseInt(pageQ) : 1;
-      this.searchText = searchQ ? searchQ : null;
-      this.collectionSize = this.page * this.pageSize;
-      this.onPageChange();
+   this.LoadPrograms();
+  }
+
+  LoadPrograms(){
+    this.programService.getAllPrograms().subscribe(data => {
+      this.programsData = data;
     });
   }
-  onPageChange() {
-    if (this.searchText) {
-      this.router.navigate(["/programs"], {
-        queryParams: { page: this.page, search: this.searchText }
-      });
-      this.loadProgramsDataFiltered();
-    } else {
-      this.router.navigate(["/programs"], { queryParams: { page: this.page } });
-      this.loadProgramsData();
-    }
-  }
 
-  onSearch() {
-    this.onPageChange();
-  }
-  loadProgramsData() {
-    this.programService.getPrograms(this.page, this.pageSize).subscribe(
-      (response: Page<Program>) => {
-        this.programsData = response.content;
-        this.collectionSize =
-          response.totalElements > 0 ? response.totalElements : 5;
-          this.toastr.success("Server Running");
-      },
-      () =>this.toastr.error("Server Error.") 
-    );
-  }
 
-  loadProgramsDataFiltered() {
-    this.programService
-      .getPrograms(this.page, this.pageSize, this.searchText)
-      .subscribe(
-        (response: Page<Program>) => {
-          this.programsData = response.content;
-          this.collectionSize =
-            response.totalElements > 0 ? response.totalElements : 5;
-          this.resultLength =
-            response.totalElements > 0 ? this.collectionSize : 0;
-        },
-        () => this.toastr.error("Server Error.")
-      );
-  }
   openProgramForm(program: Program) {
-    const modalRef = this.modalService.open(AddProgramComponent,{ size: 'lg',centered: true,});
+    const modalRef = this.modalService.open(AddProgramComponent,{ size: 'lg',centered: true});
     modalRef.componentInstance.program = program;
     modalRef.result.then(result => {
       if (!result) return;
@@ -93,7 +48,7 @@ export class ProgramsComponent implements OnInit {
         this.programService.updateProgram(result).subscribe(
           (response: Program) => {
             if (response) {
-              this.onPageChange();
+              this.LoadPrograms();
               this.toastr.success("Update Success.")
             }
           },
@@ -104,7 +59,7 @@ export class ProgramsComponent implements OnInit {
         this.programService.addProgram(result).subscribe(
           (response: Program) => {
             if (response) {
-              this.onPageChange();
+              this.LoadPrograms();
               this.toastr.success("Program Added Successfully.")
             }
           },
@@ -121,7 +76,7 @@ export class ProgramsComponent implements OnInit {
       this.programService.deleteProgram(result).subscribe(
         response => {
           if (response) {
-            this.onPageChange();
+            this.LoadPrograms();
             this.toastr.success("Delete Success");
           }
         },

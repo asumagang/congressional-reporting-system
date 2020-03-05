@@ -53,4 +53,7 @@ export class LoginComponent implements OnInit {
   Dashboard(){
     this.router.navigate(["/admin-layout"])
   }
+  signup(){
+    this.router.navigate(["/signup"])
+  }
 }

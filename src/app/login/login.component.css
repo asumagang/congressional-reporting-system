@@ -54,9 +54,15 @@
 }
 .forgot{
   color: #0747A6;
-  font-size: 13px;
+  font-size: 14px;
 }
-  
+ .createacc{
+  color: #0747A6;
+  font-size: 14px;
+ } 
+ .createacc :hover{
+  color: black;
+ } 
   /* Fallback for Edge
   -------------------------------------------------- */
   

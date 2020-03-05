@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { NgbToastModule } from "@ng-bootstrap/ng-bootstrap";
+import { NgbToastModule, NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { AppRoutingModule } from "./app-routing.module";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
@@ -39,7 +39,7 @@ import { InsertdataformComponent } from './insertdataform/insertdataform.compone
     NgbToastModule,
     NgxPaginationModule,
     Ng2SearchPipeModule,
-    
+    NgbModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
