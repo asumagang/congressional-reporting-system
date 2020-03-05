@@ -1,93 +1,59 @@
 <div class="container-fluid addbody">
-        <div class="container">
-          <h4>{{ headTitle }}</h4>
-          <hr />
-          <form (ngSubmit)="submit()" #userForm="ngForm">
-            <div class="form-group row">
-              <label for="firstname" class="col-sm-3 col-form-label"
-                >First Name</label
-              >
-              <div class="col-sm-9">
-                <input
-                #name="ngModel"
-                [(ngModel)]="newFirstname"
-                name="firstname"
-                type="text"
-                class="form-control"
-                required
-                placeholder="First Name"
-                minlength="5"
-                maxlength="30"
-                autocomplete="off"
-                />
-                <div
-                *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)"
-                class="invalid"
-              >
-                <div class="alert alert-danger" *ngIf="firstname.errors.required">
-                  First name is required
-                </div>
-                <div class="alert alert-danger" *ngIf="firstname.errors.minlength">
-                  Must be atleast 5 characters
-                </div>
-              </div>
-              </div>
-            </div>
-            <div class="form-group row">
-                    <label for="lastname" class="col-sm-3 col-form-label"
-                      >Last Name</label
-                    >
-                    <div class="col-sm-9">
-                      <input
-                      #name="ngModel"
-                      [(ngModel)]="newLastname"
-                      name="lastname"
-                      type="text"
-                      class="form-control"
-                      required
-                      placeholder="Last name"
-                      minlength="5"
-                      maxlength="30"
-                      autocomplete="off"
-                      />
-                      <div
-                      *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)"
-                      class="invalid"
-                    >
-                      <div class="alert alert-danger" *ngIf="lastname.errors.required">
-                        Last name is required
-                      </div>
-                      <div class="alert alert-danger" *ngIf="lastname.errors.minlength">
-                        Must be atleast 5 characters
-                      </div>
-                    </div>
-                    </div>
-                  </div>
-                  
-           
-            
-            <div class="form-group ">
-              <div>
-                      <input
-                      type="submit"
-                      class="btn btn-primary float-right"
-                      value="{{ user? 'Update' : 'Create ' }}"
-                      [disabled]="
-                        !userForm.form.valid ||
-                        (firstname.pristine &&
-                        label.pristine)
-                      "
-                    />
-                    <button
-                      type="button"
-                      class="btn btn-dark mr-1 float-right"
-                      (click)="activeModal.close()"
-                    >
-                      Close
-                    </button>
-              </div>
-            </div>
-          </form>
+  <div class="container">
+    <h4>{{ headTitle }}</h4>
+    <hr />
+    <form (ngSubmit)="submit()" #userForm="ngForm">
+      <div class="form-group row">
+        <label  class="col-sm-3 col-form-label"
+          >First Name</label
+        >
+        <div class="col-sm-9">
+          <input
+          #name="ngModel"
+          [(ngModel)]="newFirstname"
+          name="firstname"
+          type="text"
+          class="form-control form-control-sm"
+          required
+          placeholder="First Name"
+          minlength="5"
+          maxlength="50"
+          autocomplete="off"
+          />
+          <!-- <div
+          *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)"
+          class="invalid"
+        >
+          <div class="alert alert-danger" *ngIf="firstname.errors.required">
+            First name is required
+          </div>
+          <div class="alert alert-danger" *ngIf="firstname.errors.minlength">
+            Must be atleast 5 characters
+          </div>
+        </div> -->
         </div>
       </div>
-      
+
+      <div class="form-group ">
+        <div>
+                <input
+                type="submit"
+                class="btn btn-primary float-right"
+                value="{{ user ? 'Update' : 'Create ' }}"
+                [disabled]="
+                  !userForm.form.valid ||
+                  (firstname.pristine )
+                "
+              />
+              <button
+                type="button"
+                class="btn btn-dark mr-1 float-right"
+                (click)="activeModal.close()"
+              >
+                Close
+              </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
