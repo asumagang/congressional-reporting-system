@@ -172,9 +172,13 @@
               class="form-control form-control-sm"
               name="mobileno"
               [(ngModel)]="form.mobileno"
+              [pattern]="mobNumberPattern"
               required
               #mobileno="ngModel"> <div class="alert-danger" *ngIf="f.submitted && mobileno.invalid">
                 <div *ngIf="mobileno.errors.required">Mobile Number is required</div>
+                <div *ngIf="mobileno.errors.pattern">  
+                  Mobile number not valid.  
+                </div>   
               </div>
             </div>
             <div class="form-group col-md-6">

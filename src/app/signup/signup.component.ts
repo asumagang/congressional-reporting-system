@@ -12,7 +12,7 @@ export class SignupComponent implements OnInit {
   isSuccessful = false;
   isSignUpFailed = false;
   errorMessage = '';
-
+  mobNumberPattern = "^((\\+91-?)|0)?[0-9]{11}$";  
   constructor(private router: Router,private authService: AuthService) { }
 
   ngOnInit() {
